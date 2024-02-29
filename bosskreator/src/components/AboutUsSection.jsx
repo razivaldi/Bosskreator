@@ -9,7 +9,7 @@ const AboutUsSection = () => {
       <SectionName title='about us' />
       <div className="flex w-[90%] lg:mx-auto pl-12 lg:pl-0 gap-2">
         <div>
-          <Image src={"/ScrollAcc.png"} width={30} height={400} alt="" />
+          <Image src={"/ScrollAcc.png"} width={25} height={400} alt="" />
         </div>
         <div className="w-full lg:p-6">
           <h1 className="text-3xl xl:text-6xl font-semibold mb-4">More Than Code: Building Relationships, <span className="text-titleAccent">Delivering Solutions</span>.</h1>
