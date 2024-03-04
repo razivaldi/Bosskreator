@@ -16,42 +16,58 @@ const data = [
   },
   {
     image: '/client.png',
-    title: 'Client-Centric Approach',
+    title: 'Expertise and Experience',
     desc: 'Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility'
   },
   {
     image: '/client.png',
-    title: 'Client-Centric Approach',
+    title: 'Continuous Improvement',
     desc: 'Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility'
   }
 ]
 
 const WhyUs = () => {
   return (
-    <div className="w-full my-20 relative">
-      <SectionName title='why us' />
-      <div className="w-[85%] mx-auto mb-10">
-        <div className="w-full lg:p-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 text-center">More Than Code: Building Relationships, <span className="text-titleAccent">Delivering Solutions</span>.</h1>
-          <hr />
-          <div className="flex w-full justify-between items-center mt-5">
-            <p className="line-clamp-3 w-4/6">Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit ultrices nisl vitae.</p>
-            <button className="btn rounded-full btn-sm btn-ghost btn-active">Contact Us<span><FaArrowRight /></span></button>
+    <>
+      <div className="w-full mt-20 mb-9 relative">
+        <SectionName title='why us' />
+        <div className="flex w-[90%] mx-auto">
+          <div className="relative w-4 h-40 mx-3 md:w-8 md:h-72 lg:hidden">
+            <Image src={"/ScrollAcc.png"} fill alt="" />
+          </div>
+          <div className="w-full">
+            <h1 className="text-2xl md:text-5xl leading-[1.32] md:leading-[1.32] lg:leading-[1.32] font-monument lg:text-center lg:px-8">More Than Code: Building Relationships, <span className="text-accent">Delivering Solutions</span>.</h1>
+            <hr className="my-3 md:my-10" />
+            <div className="flex w-full justify-between items-center">
+              <p className="line-clamp-3 text-xs md:text-lg font-medium w-4/6">Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit ultrices nisl vitae.</p>
+              <button className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">Learn More<span className="ml-1.5 nd:ml-3"><FaArrowRight /></span></button>
+            </div>
           </div>
         </div>
       </div>
-      <div className="grid w-[90%] justify-items-center items-center justify-center lg:grid-cols-2 mx-auto gap-8 flex-wrap">
-        {data.map((item, index) => (
-          <div key={index} className="card card-compact bg-gradient-to-b from-zinc-900 to-black mx-10 shadow-xl">
-            <figure><Image src={item.image} alt="" width={1000} height={500} /></figure>
-            <div className="card-body">
-              <h2 className="my-3 text-4xl lg:text-5xl">{item.title}</h2>
-              <p className="text-xs md:text-base">{item.desc}</p>
+      {/* CARD CONTAINER */}
+      <div className="w-full mb-20">
+        <div className="grid w-[80%] lg:w-[90%] justify-items-center items-center justify-center lg:grid-cols-2 mx-auto gap-11 md:gap-y-[92px]">
+          {data.map((item, index) => (
+            <div key={index} className="rounded-[10px] md:rounded-[20px] overflow-hidden min-h-[200px] md:min-h-[400px] hover:scale-[1.03] transition-transform transform ease-in-out border border-white">
+              <div className="w-full h-[100px] md:h-[200px] relative inset-0 bg-black opacity-50">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className=" *:w-[90%] *:mx-auto px-5 py-2.5 md:py-5 h-fit bg-gradient-to-t from-black to-zinc-900/50">
+                <h2 className="text-lg md:text-4xl font-monument">{item.title}</h2>
+                <p className="text-[7px] py-1.5 md:py-4 md:text-sm font-medium">{item.desc}</p>
+              </div>
             </div>
-          </div>
-        ))}
+
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 };
 

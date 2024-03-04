@@ -35,24 +35,24 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <div className="bg-[#0f0f0f] relative">
+    <div className="bg-[#1E1E1E] relative">
       <span className="absolute w-[500px] h-[500px] bg-[#171717] -top-40 -left-40 " style={{ borderRadius: "38%", transform: "rotate(30deg)" }}></span>
-      <div className="w-[90%] p-10 mx-auto text-white flex flex-wrap flex-row justify-around -z-10">
-        <div className="md:w-[60%] text-center lg:text-left lg:w-[40%] z-0">
-          <Image src="/logo.png" alt="logo" width={200} height={200} />
-          <p className="text-sm py-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo temporibus magnam ducimus quas cumque sequi delectus molestias, quod repudiandae.</p>
-          <div className="flex gap-4 text-2xl justify-center lg:justify-start">
+      <div className="w-[80%] pt-10 pb-4 mx-auto text-white flex flex-wrap flex-row justify-around -z-10">
+        <div className="w-full md:w-[60%] text-center lg:text-left lg:w-[40%] z-0">
+          <Image src="/logo.png" alt="logo" quality={100} width={200} height={200} style={{ width: 'auto', height: 'auto' }} className="mx-auto lg:mx-0" />
+          <p className="text-sm py-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo temporibus magnam ducimus quas cumque sequi delectus molestias, quod repudiandae.</p>
+          <div className="flex gap-4 text-xl justify-center mb-6 lg:justify-start">
             <Link href={"/"}><FaFacebook /></Link>
             <Link href={"/"}><FaInstagram /></Link>
             <Link href={"/"}><FaLinkedin /></Link>
           </div>
         </div>
-        <div className="flex gap-x-28 flex-wrap mt-10 lg:mt-0 z-10">
+        <div className="flex gap-x-20 flex-wrap gap-3 md:justify-between md:w-[90%] lg:w-auto z-10">
           {menuItems.map((section, index) => (
             <div key={index}>
-              <h6 className="text-2xl font-medium py-2">{section.title}</h6>
+              <h6 className="text-xl font-semibold py-2">{section.title}</h6>
               {section.links.map((link, idx) => (
-                <Link key={idx} href={link.href} className="link link-hover text-gray-300 text-sm block text-nowrap py-1">{link.text}</Link>
+                <Link key={idx} href={link.href} className="text-sm block text-nowrap py-1 hover:underline">{link.text}</Link>
               ))}
             </div>
           ))}

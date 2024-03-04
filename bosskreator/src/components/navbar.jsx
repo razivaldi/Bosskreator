@@ -26,7 +26,10 @@ const sidebarVariants = {
     }
   },
   closed: {
-    x: "100vw"
+    x: "100vw",
+    transition: {
+      duration: 0.2
+    }
   }
 }
 
@@ -52,43 +55,44 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar absolute top-0 w-[90%]">
-      <div className="navbar-start">
-        <Link href='/' style={{ zIndex: 999, position: "relative" }}>
-          <Image src="/logo.png" alt="logo" width={100} height={100} priority />
+    <nav className="w-full md:h-[87px] h-[77px] flex absolute z-10">
+      <div className="mx-auto top-0 w-[90%] flex justify-between items-center">
+        <Link href={"/"} style={{ zIndex: 20 }} className="relative inline-block scale-125 origin-left">
+          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" alt="logo" width={122} height={30} style={{ objectFit: 'cover' }} />
         </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-x-20">
-          {menuItems.map((item, index) => (
-            <li key={index}><Link href={item.path}>{item.title}</Link></li>
-          ))}
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <Link href='/'>
-          <button className="btn btn-sm btn-ghost btn-active rounded-full hidden lg:block">Contact Us</button>
-        </Link>
-        <div className="">
-          <button className="btn relative btn-ghost lg:hidden " style={{ zIndex: 20 }} onClick={toggleSidebar}>
-            {isOpen ? (
-              <svg className="fill-current relative" style={{ zIndex: 110 }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
-            ) : (
-              <svg className="fill-current relative" style={{ zIndex: 100 }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
-            )}
-          </button>
-          {/* RESPONSIVE MENU */}
-          <motion.div variants={sidebarVariants} animate={isOpen ? "open" : "closed"} className="top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800" style={{ zIndex: 10 }}>
-            <ul className="menu rounded-box mt-14 text-lg" >
-              {menuItems.map((item, index) => (
-                <motion.li variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"} key={index}><Link href={item.path} className="p-5">{item.title}</Link></motion.li>
-              ))}
-              <motion.li variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"}><Link href={'/contact'} className="p-5">Contact Us</Link></motion.li>
-            </ul>
-          </motion.div>
+        <div className="hidden md:flex">
+          <ul className="flex md:gap-x-10 lg:gap-x-20 text-sm">
+            {menuItems.map((item, index) => (
+              <li key={index}><Link href={item.path} className="rounded p-2 hover:bg-white-20">{item.title}</Link></li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </div >
+        <div className="flex ">
+          <Link href='/contact'>
+            <button className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">Contact Us</button>
+          </Link>
+          <div className="">
+            <button className="relative md:hidden hover:bg-white-20 p-1 rounded shadow transition duration-200 ease-in-out transform active:scale-95" style={{ zIndex: 20 }} onClick={toggleSidebar}>
+              {isOpen ? (
+                <svg className="fill-current relative" style={{ zIndex: 110 }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
+              ) : (
+                <svg className="fill-current relative" style={{ zIndex: 100 }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+              )}
+            </button>
+            {/* RESPONSIVE MENU */}
+            <motion.div variants={sidebarVariants} animate={isOpen ? "open" : "closed"} className="top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800" style={{ zIndex: 10 }}>
+              <div className="mt-20 text-lg" >
+                {menuItems.map((item, index) => (
+                  <motion.div variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"} key={index}><Link href={item.path} className="block rounded my-2 py-2 px-4 text-sm hover:bg-white-20">{item.title}</Link></motion.div>
+                ))}
+                <motion.div variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"}><Link href={'/contact'} className="block rounded my-2 py-2 px-4 text-sm hover:bg-white-20">Contact Us</Link></motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div >
+    </nav >
+
   )
 };
 

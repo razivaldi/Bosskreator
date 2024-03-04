@@ -1,18 +1,18 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full">
-      <div className="hero min-h-screen" style={{ backgroundImage: 'url("/hero.png")' }}>
-        <Navbar />
-        <div className="hero-content mt-24 text-center">
-          <div className="w-[80%]">
-            <h1 className="mb-5 text-5xl md:text-6xl font-bold">Turning Ideas into Intuitive Digital Experiences.</h1>
-            <p className="mb-10 lg:mb-20">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <p className="mb-16">Lacus orci cursus ut magnis quam ullamcorper eget leo:</p>
-            <Image src="/frame1.png" alt="partner" width={1500} height={1000} />
+    <div className="w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/hero.png")' }}>
+      <div className="h-screen text-center flex flex-col justify-around pt-24 md:pt-0">
+        <div className="w-[80%] lg:w-[90%] mx-auto md:mt-48">
+          <h1 className="text-3xl leading-[1.1] md:text-6xl mb-7 md:leading-[1.1] font-monument">Turning Ideas into Intuitive Digital Experiences.</h1>
+          <p className="mx-auto md:w-[90%] line-clamp-3 font-medium text-lg">Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit ultrices nisl vitae.</p>
+        </div>
+        <div className="w-full ">
+          <p className=" text-center text-lg w-[90%] mb-5 md:mb-10 font-medium mx-auto">Lacus orci cursus ut magnis quam ullamcorper eget leo:</p>
+          <div className="h-[50px] w-[80%] mx-auto relative">
+            <Image src="/frame1.png" alt="partner" fill className="object-cover" />
           </div>
         </div>
       </div>
