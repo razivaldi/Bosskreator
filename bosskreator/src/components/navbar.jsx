@@ -57,8 +57,8 @@ const Navbar = () => {
   return (
     <nav className="w-full md:h-[87px] h-[77px] flex absolute">
       <div className="mx-auto top-0 w-[90%] flex justify-between items-center">
-        <Link href={"/"} style={{ zIndex: 10 }} className="relative inline-block scale-125 origin-left">
-          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" alt="logo" width={122} height={30} style={{ objectFit: 'cover', height: 'auto', width: 'auto' }} />
+        <Link href={"/"} style={{ zIndex: 15 }} className="relative inline-block w-[123px] h-[30px]">
+          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" fill alt="logo" style={{ objectFit: 'cover' }} quality={100} />
         </Link>
         <div className="hidden md:flex">
           <ul className="flex md:gap-x-10 lg:gap-x-20">

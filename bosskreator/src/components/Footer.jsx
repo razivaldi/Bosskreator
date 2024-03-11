@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="w-full md:w-[60%] text-center lg:text-left lg:w-[40%] z-0">
           <Image src="/logo.png" alt="logo" quality={100} width={200} height={200} style={{ width: 'auto', height: 'auto' }} className="mx-auto lg:mx-0" />
           <p className="text-sm py-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo temporibus magnam ducimus quas cumque sequi delectus molestias, quod repudiandae.</p>
-          <div className="flex gap-4 text-xl justify-center mb-6 lg:justify-start">
+          <div className="flex gap-4 text-xl justify-center mb-6 lg:mb-0 lg:justify-start">
             <Link href={"/"}><FaFacebook /></Link>
             <Link href={"/"}><FaInstagram /></Link>
             <Link href={"/"}><FaLinkedin /></Link>

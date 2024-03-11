@@ -1,5 +1,7 @@
 import Banner from "@/components/Banner";
 import SectionName from "@/components/SectionName";
+import OurTeam from "@/components/aboutpage/OurTeam";
+import OurValues from "@/components/aboutpage/OurValues";
 import Image from "next/image";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
@@ -72,6 +74,8 @@ const About = () => {
         </div>
       </div>
       {/* END OF CARD */}
+      <OurValues />
+      <OurTeam />
       <Banner />
     </section>
   )
