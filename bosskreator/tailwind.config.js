@@ -14,7 +14,9 @@ module.exports = {
         'accent': '#5D5FEF',
         'white-20': 'rgba(255, 255, 255, 0.2)',
         'card-bg': 'rgba(3, 8, 50, 0.8)',
-      }
+        'card-active': '#5D5FEF',
+        'card-bg': '#030832',
+      },
     },
   },
 };

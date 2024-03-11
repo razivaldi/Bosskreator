@@ -1,5 +1,5 @@
 import React from "react";
-import SectionName from "./SectionName";
+import SectionName from "../SectionName";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -30,7 +30,7 @@ const WhyUs = () => {
   return (
     <>
       <div className="w-full mt-20 mb-9 relative">
-        <SectionName title='why us' />
+        <SectionName>why us</SectionName>
         <div className="flex w-[90%] mx-auto">
           <div className="relative w-4 h-40 mx-3 md:w-8 md:h-72 lg:hidden">
             <Image src={"/ScrollAcc.png"} fill alt="" />
@@ -49,7 +49,7 @@ const WhyUs = () => {
       <div className="w-full mb-20">
         <div className="grid w-[80%] lg:w-[90%] justify-items-center items-center justify-center lg:grid-cols-2 mx-auto gap-11 md:gap-y-[92px]">
           {data.map((item, index) => (
-            <div key={index} className="rounded-[10px] md:rounded-[20px] overflow-hidden min-h-[200px] md:min-h-[400px] hover:scale-[1.03] transition-transform transform ease-in-out border border-white">
+            <div key={index} className="rounded-[10px] md:rounded-[20px] overflow-hidden min-h-[200px] md:min-h-[400px] hover:scale-[1.03] transition-transform transform ease-in-out">
               <div className="w-full h-[100px] md:h-[200px] relative inset-0 bg-black opacity-50">
                 <Image
                   src={item.image}
@@ -58,12 +58,11 @@ const WhyUs = () => {
                   className="object-cover"
                 />
               </div>
-              <div className=" *:w-[90%] *:mx-auto px-5 py-2.5 md:py-5 h-fit bg-gradient-to-t from-black to-zinc-900/50">
+              <div className=" *:w-[90%] *:mx-auto px-5 pt-2.5 md:pt-5 h-fit bg-gradient-to-t from-black to-zinc-900/50">
                 <h2 className="text-lg md:text-4xl font-monument">{item.title}</h2>
                 <p className="text-[7px] py-1.5 md:py-4 md:text-sm font-medium">{item.desc}</p>
               </div>
             </div>
-
           ))}
         </div>
       </div>

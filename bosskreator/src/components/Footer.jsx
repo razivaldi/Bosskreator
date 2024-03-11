@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <div className="bg-[#1E1E1E] relative">
       <span className="absolute w-[500px] h-[500px] bg-[#171717] -top-40 -left-40 " style={{ borderRadius: "38%", transform: "rotate(30deg)" }}></span>
-      <div className="w-[80%] pt-10 pb-4 mx-auto text-white flex flex-wrap flex-row justify-around -z-10">
+      <div className="w-[80%] pt-9 pb-4 mx-auto text-white flex flex-wrap flex-row justify-around -z-10">
         <div className="w-full md:w-[60%] text-center lg:text-left lg:w-[40%] z-0">
           <Image src="/logo.png" alt="logo" quality={100} width={200} height={200} style={{ width: 'auto', height: 'auto' }} className="mx-auto lg:mx-0" />
           <p className="text-sm py-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo temporibus magnam ducimus quas cumque sequi delectus molestias, quod repudiandae.</p>
@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="flex gap-x-20 flex-wrap gap-3 md:justify-between md:w-[90%] lg:w-auto z-10">
           {menuItems.map((section, index) => (
             <div key={index}>
-              <h6 className="text-xl font-semibold py-2">{section.title}</h6>
+              <h6 className="text-xl font-semibold pb-2">{section.title}</h6>
               {section.links.map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-sm block text-nowrap py-1 hover:underline">{link.text}</Link>
               ))}

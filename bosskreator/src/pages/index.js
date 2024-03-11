@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
-import AboutUsSection from "@/components/AboutUsSection";
-import ServiceSection from "@/components/ServiceSection";
-import WhyUs from "@/components/WhyUs";
+import Hero from "@/components/homepage/Hero";
+import AboutUsSection from "@/components/homepage/AboutUsSection";
+import ServiceSection from "@/components/homepage/ServiceSection";
+import WhyUs from "@/components/homepage/WhyUs";
 import Banner from "@/components/Banner";
 
 export default function Home() {

@@ -55,21 +55,21 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="w-full md:h-[87px] h-[77px] flex absolute z-10">
+    <nav className="w-full md:h-[87px] h-[77px] flex absolute">
       <div className="mx-auto top-0 w-[90%] flex justify-between items-center">
-        <Link href={"/"} style={{ zIndex: 20 }} className="relative inline-block scale-125 origin-left">
-          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" alt="logo" width={122} height={30} style={{ objectFit: 'cover' }} />
+        <Link href={"/"} style={{ zIndex: 10 }} className="relative inline-block scale-125 origin-left">
+          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" alt="logo" width={122} height={30} style={{ objectFit: 'cover', height: 'auto', width: 'auto' }} />
         </Link>
         <div className="hidden md:flex">
-          <ul className="flex md:gap-x-10 lg:gap-x-20 text-sm">
+          <ul className="flex md:gap-x-10 lg:gap-x-20">
             {menuItems.map((item, index) => (
-              <li key={index}><Link href={item.path} className="rounded p-2 hover:bg-white-20">{item.title}</Link></li>
+              <li key={index}><Link href={item.path} className="block rounded-full px-4 py-2.5 hover:bg-white/10 text-sm font-medium active:scale-95 transition duration-200 ease-in-out transform">{item.title}</Link></li>
             ))}
           </ul>
         </div>
         <div className="flex ">
           <Link href='/contact'>
-            <button className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">Contact Us</button>
+            <button className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">Contact Us</button>
           </Link>
           <div className="">
             <button className="relative md:hidden hover:bg-white-20 p-1 rounded shadow transition duration-200 ease-in-out transform active:scale-95" style={{ zIndex: 20 }} onClick={toggleSidebar}>
@@ -92,7 +92,6 @@ const Navbar = () => {
         </div>
       </div >
     </nav >
-
   )
 };
 
