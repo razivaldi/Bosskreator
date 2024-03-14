@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="flex gap-x-20 flex-wrap gap-3 md:justify-between md:w-[90%] lg:w-auto z-10">
           {menuItems.map((section, index) => (
             <div key={index}>
-              <h6 className="text-xl font-semibold pb-2">{section.title}</h6>
+              <h3 className="text-xl font-semibold pb-2">{section.title}</h3>
               {section.links.map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-sm block text-nowrap py-1 hover:underline">{link.text}</Link>
               ))}

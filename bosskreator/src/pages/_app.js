@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const monument = localFont({
-  src: '../../public/fonts/MonumentExtended-Regular.otf',
+  src: '../../public/fonts/MonumentExtendedRegular.woff2',
   variable: '--font-monument',
   display: 'swap',
 });
@@ -17,6 +17,8 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <title>BOSS KREATOR</title>
+        <meta name="description" content="Turning Ideas into Intuitive Digital Experiences."></meta>
       </Head>
       <main className={`${manrope.className} ${monument.variable} overflow-hidden`}>
         <Navbar />

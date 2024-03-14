@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionName from "../SectionName";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion"
 
 
 const data = [
@@ -29,7 +30,7 @@ const ServiceSection = () => {
   const [defaultImage, setDefaultImage] = useState('/phone.png');
 
   return (
-    <>
+    <motion.div className="w-full my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
       <div className="w-full mt-20 lg:mb-10 pb-5 relative">
         <SectionName>services</SectionName>
         <div className="flex md:w-[90%] w-[85%] mx-auto">
@@ -72,7 +73,7 @@ const ServiceSection = () => {
           ))}
         </div>
       </div>
-    </>
+    </motion.div>
   )
 };
 

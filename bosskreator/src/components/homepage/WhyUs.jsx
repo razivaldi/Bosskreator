@@ -2,6 +2,7 @@ import React from "react";
 import SectionName from "../SectionName";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion"
 
 const data = [
   {
@@ -28,7 +29,7 @@ const data = [
 
 const WhyUs = () => {
   return (
-    <>
+    <motion.div className="w-full my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
       <div className="w-full mt-20 mb-9 relative">
         <SectionName>why us</SectionName>
         <div className="flex w-[90%] mx-auto">
@@ -66,7 +67,7 @@ const WhyUs = () => {
           ))}
         </div>
       </div>
-    </>
+    </motion.div>
   )
 };
 

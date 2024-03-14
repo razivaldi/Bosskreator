@@ -22,7 +22,7 @@ const data = [
 ]
 const About = () => {
   return (
-    <section className="w-full mb-20 lg:pt-[119px]" style={{ backgroundImage: 'linear-gradient(180deg, #1E1E1E 12.88%, rgba(0, 0, 0, 0) 100%)', backgroundSize: '100% 860px', backgroundRepeat: 'no-repeat' }}>
+    <main className="w-full mb-20 lg:pt-[119px]" style={{ backgroundImage: 'linear-gradient(180deg, #1E1E1E 12.88%, rgba(0, 0, 0, 0) 100%)', backgroundSize: '100% 860px', backgroundRepeat: 'no-repeat' }}>
       {/* HEADER */}
       <div className="w-full lg:mb-[60px] text-center ">
         <h1 className="lg:text-[50px] font-monument mb-3.5">About <span className="text-accent">Us</span></h1>
@@ -77,7 +77,7 @@ const About = () => {
       <OurValues />
       <OurTeam />
       <Banner />
-    </section>
+    </main>
   )
 };
 

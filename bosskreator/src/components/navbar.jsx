@@ -20,13 +20,13 @@ const menuItems = [
 
 const sidebarVariants = {
   open: {
-    x: 0,
+    x: '0px',
     transition: {
       duration: 0.2
     }
   },
   closed: {
-    x: "100vw",
+    x: '100%',
     transition: {
       duration: 0.2
     }
@@ -58,7 +58,7 @@ const Navbar = () => {
     <nav className="w-full md:h-[87px] h-[77px] flex absolute">
       <div className="mx-auto top-0 w-[90%] flex justify-between items-center">
         <Link href={"/"} style={{ zIndex: 15 }} className="relative inline-block w-[123px] h-[30px]">
-          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" fill alt="logo" style={{ objectFit: 'cover' }} quality={100} />
+          <Image src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844" fill alt="logo" style={{ objectFit: 'cover' }} quality={100} sizes="(100vw, 100vh)" />
         </Link>
         <div className="hidden md:flex">
           <ul className="flex md:gap-x-10 lg:gap-x-20">
@@ -71,7 +71,7 @@ const Navbar = () => {
           <Link href='/contact'>
             <button className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">Contact Us</button>
           </Link>
-          <div className="">
+          <div>
             <button className="relative md:hidden hover:bg-white-20 p-1 rounded shadow transition duration-200 ease-in-out transform active:scale-95" style={{ zIndex: 20 }} onClick={toggleSidebar}>
               {isOpen ? (
                 <svg className="fill-current relative" style={{ zIndex: 110 }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
@@ -80,7 +80,7 @@ const Navbar = () => {
               )}
             </button>
             {/* RESPONSIVE MENU */}
-            <motion.div variants={sidebarVariants} animate={isOpen ? "open" : "closed"} className="top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800" style={{ zIndex: 10 }}>
+            <motion.div variants={sidebarVariants} animate={isOpen ? "open" : "closed"} className={`${!isOpen ? 'sidebar-hidden' : ''} top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800`} style={{ zIndex: 10 }}>
               <div className="mt-20 text-lg" >
                 {menuItems.map((item, index) => (
                   <motion.div variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"} key={index}><Link href={item.path} className="block rounded my-2 py-2 px-4 text-sm hover:bg-white-20">{item.title}</Link></motion.div>
