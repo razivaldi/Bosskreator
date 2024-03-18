@@ -1,22 +1,17 @@
-import { Inter } from "next/font/google";
-import Hero from "@/components/Hero";
-import AboutUsSection from "@/components/AboutUsSection";
-import Footer from "@/components/Footer";
-import ServiceSection from "@/components/ServiceSerction";
-import WhyUs from "@/components/WhyUs";
+import Hero from "@/components/homepage/Hero";
+import AboutUsSection from "@/components/homepage/AboutUsSection";
+import ServiceSection from "@/components/homepage/ServiceSection";
+import WhyUs from "@/components/homepage/WhyUs";
 import Banner from "@/components/Banner";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main>
       <Hero />
       <AboutUsSection />
       <ServiceSection />
       <WhyUs />
       <Banner />
-      <Footer />
     </main>
   );
 }
