@@ -18,8 +18,3 @@
 body.sidebar-open {
   overflow: hidden;
 }
-
-.sidebar-hidden {
-  transform: translateX(100vw);
-  visibility: hidden; /* Ensures that the sidebar is not just off-screen, but also not interactable */
-}

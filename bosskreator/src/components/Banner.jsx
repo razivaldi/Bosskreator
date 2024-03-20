@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const Banner = () => {
   return (
     <section className="mb-20">
-      <motion.div whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className="w-[90%] mx-auto text-black bg-[url('/code.jpg')] bg-cover relative z-10">
+      <motion.div whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="w-[90%] mx-auto text-black bg-[url('/code.jpg')] bg-cover relative z-10">
         <div className="w-full h-full text-center bg-[rgba(255,255,255,0.82)] flex justify-center items-center gap-6 flex-col py-14 px-4 md:py-20 md:px-16 lg:px-20 rounded-xl">
           <h1 className="text-2xl md:text-4xl leading-[1.1] font-monument">Turning Ideas into Intuitive Digital Experiences.</h1>
           <p className="text-sm font-medium mb-3 lg:w-4/6">Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit ultrices nisl vitae.</p>
