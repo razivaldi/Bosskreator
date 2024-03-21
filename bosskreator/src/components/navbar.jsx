@@ -80,7 +80,7 @@ const Navbar = () => {
               )}
             </button>
             {/* RESPONSIVE MENU */}
-            <motion.div variants={sidebarVariants} animate={isOpen ? "open" : "closed"} className={`${!isOpen ? 'sidebar-hidden' : ''} top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800`} style={{ zIndex: 10 }}>
+            <motion.div variants={sidebarVariants} initial={false} animate={isOpen ? "open" : "closed"} className={` top-0 left-0 px-2 fixed w-screen h-screen bg-gradient-to-t from-black to-zinc-800`} style={{ zIndex: 10 }}>
               <div className="mt-20 text-lg" >
                 {menuItems.map((item, index) => (
                   <motion.div variants={sideBarItemsVariants} animate={isOpen ? "open" : "closed"} key={index}><Link href={item.path} className="block rounded my-2 py-2 px-4 text-sm hover:bg-white-20">{item.title}</Link></motion.div>

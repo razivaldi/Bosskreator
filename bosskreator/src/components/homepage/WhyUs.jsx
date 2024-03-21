@@ -27,6 +27,11 @@ const data = [
   }
 ]
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const WhyUs = () => {
   return (
     <motion.div className="w-full my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
@@ -50,7 +55,13 @@ const WhyUs = () => {
       <div className="w-full mb-20">
         <div className="grid w-[80%] lg:w-[90%] justify-items-center items-center justify-center lg:grid-cols-2 mx-auto gap-11 md:gap-y-[92px]">
           {data.map((item, index) => (
-            <div key={index} className="rounded-[10px] md:rounded-[20px] overflow-hidden min-h-[200px] md:min-h-[400px] hover:scale-[1.03] transition-transform transform ease-in-out">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.5 }} key={index}
+              className="rounded-[10px] md:rounded-[20px] overflow-hidden min-h-[200px] md:min-h-[400px] hover:scale-[1.03] transition-transform transform ease-in-out">
               <div className="w-full h-[100px] md:h-[200px] relative inset-0 bg-black opacity-50">
                 <Image
                   src={item.image}
@@ -63,7 +74,7 @@ const WhyUs = () => {
                 <h2 className="text-lg md:text-4xl font-monument">{item.title}</h2>
                 <p className="text-[7px] py-1.5 md:py-4 md:text-sm font-medium">{item.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
