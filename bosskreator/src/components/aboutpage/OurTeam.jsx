@@ -5,37 +5,44 @@ import Image from "next/image";
 const data = [
   {
     id: 1,
-    url: '/maria.png',
+    url: "/maria.png",
   },
   {
     id: 2,
-    url: '/bryan.png',
+    url: "/bryan.png",
   },
   {
     id: 3,
-    url: '/thomi.png',
+    url: "/thomi.png",
   },
   {
     id: 4,
-    url: '/yefi.png',
+    url: "/yefi.png",
   },
-]
+];
 const OurTeam = () => {
   return (
     <section className="relative mb-14">
       <SectionName>our team</SectionName>
       <div className="w-[90%] mx-auto">
-        <h1 className="font-monument lg:text-[50px] leading-[1.1] text-center mb-14">Meet the <span className="text-accent">Minds</span> Behind Our Digital Mastery</h1>
-        <div className="flex gap-11 justify-center">
+        <h1 className="font-monument text-xl md:text-[50px] leading-[1.1] text-center mb-14">
+          Meet the <span className="text-accent">Minds</span> Behind Our Digital
+          Mastery
+        </h1>
+        <div className="grid gap-5 lg:gap-11 grid-cols-2 lg:grid-cols-4 justify-center">
           {data.map(({ id, url }) => (
-            <div key={id} className="h-[298px] w-[284px] relative" style={{ borderRadius: '20px', overflow: 'hidden' }}>
-              <Image src={url} fill className="object-cover" alt="team" />
+            <div
+              key={id}
+              className=" h-[180px]  md:h-[230px] lg:h-[298px] relative"
+              style={{ borderRadius: "20px", overflow: "hidden" }}
+            >
+              <Image src={url} fill className="object-cover" alt={""} />
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 };
 
 export default OurTeam;

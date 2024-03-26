@@ -6,11 +6,12 @@
   background: #010101;
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   color: white;
 }
 
-*, html {
+*,
+html {
   scroll-behavior: smooth;
   /* border: 1px red solid; */
 }
