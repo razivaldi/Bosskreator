@@ -11,9 +11,11 @@ const list = [
 
 const CardPrice = () => {
   return (
-    <div className="flex flex-col border border-gray-200 text-center rounded-xl p-8 bg-[#E7E8E8]">
-      <h4 className="font-semibold text-xl text-accent">Free</h4>
-      <span className="my-3 font-monument text-5xl text-black">1,3 Juta</span>
+    <div className="flex flex-col border border-gray-200 text-center rounded-xl p-4 md:p-8 bg-[#E7E8E8]">
+      <h4 className="font-semibold text-sm md:text-xl text-accent">Free</h4>
+      <span className="my-3 font-monument text-4xl md:text-5xl text-black">
+        1,3 Juta
+      </span>
       <p className="text-sm text-[#475467]">Our most popular plan.</p>
       <ul className="mt-7 space-y-2.5 text-sm">
         {list.map((item, index) => (
@@ -38,7 +40,7 @@ const CardPrice = () => {
         ))}
       </ul>
       <Link
-        className="mt-16 py-3 px-4 inline-flex justify-center items-center text-sm font-semibold rounded-full border border-transparent bg-accent disabled:opacity-50 disabled:pointer-events-none"
+        className="mt-8 md:mt-16 py-3 px-4 inline-flex justify-center items-center text-sm font-semibold rounded-full border border-transparent bg-accent disabled:opacity-50 disabled:pointer-events-none"
         href="#"
       >
         Get Started

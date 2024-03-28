@@ -3,9 +3,9 @@ import { TbMapPinFilled } from "react-icons/tb";
 
 const Contact = () => {
   return (
-    <main className="w-full pb-14 pt-[119px] bg-gradient-to-b from-[#1E1E1E] to-white/25">
+    <main className="w-full pb-14 pt-[119px] bg-gradient-to-b from-[#1E1E1E] to-white/25 ">
       <div className="w-[80%] mx-auto text-center mb-10">
-        <h1 className="font-monument md:text-[50px] leading-[1.1] mb-3.5">
+        <h1 className="font-monument text-2xl md:text-[50px] leading-[1.1] mb-3.5">
           Contact <span className="text-accent">Us</span>
         </h1>
         <p className="font-medium md:text-lg">
@@ -13,11 +13,11 @@ const Contact = () => {
         </p>
       </div>
       <div className="w-[80%] mx-auto lg:flex justify-center items-center gap-6 relative">
-        <div className="p-12 space-y-24 mb-8 lg:mb-0 bg-[#1E1E1E] rounded-[18px] lg:w-1/2">
+        <div className="p-6 md:p-12 space-y-10 md:space-y-24 mb-8 lg:mb-0 bg-[#1E1E1E] rounded-[18px] lg:w-1/2">
           <h2 className="font-monument text-lg md:text-[42px] leading-[1.1]">
             Contact Information
           </h2>
-          <div className="flex flex-col gap-[18px] text-lg">
+          <div className="flex flex-col gap-[18px] text-sm md:text-lg">
             <p className="flex items-center">
               <span className="mr-6">
                 <IoLogoWhatsapp />
@@ -30,7 +30,7 @@ const Contact = () => {
               </span>
               hi@webcrafters.me
             </p>
-            <p className="flex items-center w-7/12">
+            <p className="flex items-center w-full md:w-7/12">
               <span className="mr-6">
                 <TbMapPinFilled />
               </span>

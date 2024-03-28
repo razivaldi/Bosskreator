@@ -25,7 +25,7 @@ const childVariants = {
 
 const Hero = () => {
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen relative -z-10">
       <Image
         src="/hero.png"
         fill

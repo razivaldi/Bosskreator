@@ -51,10 +51,10 @@ const Support = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <section className="w-full my-24">
+    <section className="w-full my-10 md:my-24">
       <div className="w-full mx-auto relative">
         <SectionName>support</SectionName>
-        <div className="w-[90%] mx-auto">
+        <div className="w-[80%] md:w-[90%] mx-auto">
           <h1 className="font-monument text-2xl text-center md:text-left md:text-[50px] leading-[1.32] mb-5">
             Frequently <span className="text-accent">Asked</span> Questions
           </h1>
@@ -64,7 +64,7 @@ const Support = () => {
             team.
           </p>
         </div>
-        <div className="w-[90%] mx-auto flex items-stretch">
+        <div className="w-[85%] md:w-[90%] mx-auto flex items-stretch">
           <div className="lg:columns-2 space-y-4 mt-14 w-full">
             {accordion.map((item, i) => (
               <div
@@ -111,15 +111,17 @@ const Support = () => {
             />
           </svg>
         </div>
-        <div className="w-[90%] mx-auto mt-5 md:flex justify-between">
+        <div className="w-[80%] md:w-[90%] mx-auto mt-5 md:flex justify-between">
           <div>
-            <p className="font-semibold text-xl">Still have questions?</p>
-            <p className="text-lg">
+            <p className="font-semibold text-sm md:text-xl">
+              Still have questions?
+            </p>
+            <p className="text-sm md:text-lg my-4">
               Can't find the answer you're looking for? Please chat to our
               friendly team.
             </p>
           </div>
-          <button className="px-8 py-4 bg-accent text-white rounded-full mr-16">
+          <button className="px-4 py-3 md:px-8 md:py-4 text-sm md:text-base mx-auto bg-accent text-white rounded-full mr-16">
             Get in Touch
           </button>
         </div>

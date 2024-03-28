@@ -56,7 +56,7 @@ const Product = () => {
             </p>
           ) : (
             <>
-              <div className="flex gap-7 font-medium text-2xl text-accent">
+              <div className="flex gap-7 font-medium text-lg md:text-2xl text-accent">
                 <p className="flex justify-center items-center gap-3.5">
                   <FiFileText />
                   <span>16 Lessons</span>
@@ -80,11 +80,11 @@ const Product = () => {
             </p>
           </div>
           <div>
-            <button className="py-4 px-8 bg-accent font-medium rounded-full mr-6 text-sm">
+            <button className="py-3 px-4 md:py-4 md:px-8 bg-accent font-medium rounded-full mr-6 text-sm">
               {product.category === "Ebook" ? "Download" : "Start Learning"}
             </button>
             {product.category === "Ebook" && (
-              <button className="py-4 px-8 bg-white-20 font-medium rounded-full text-sm">
+              <button className=" md:py-4 md:px-8 bg-white-20 font-medium rounded-full text-sm">
                 Preview
               </button>
             )}
@@ -92,7 +92,7 @@ const Product = () => {
         </div>
       </section>
       {/* DESCRIPION & REVIEW SECTION */}
-      <section className="max-w-[1030px] mx-10 lg:mx-auto mt-[72px]">
+      <section className="max-w-[1030px] mx-10 lg:mx-auto mt-10 md:mt-[72px]">
         <div className="font-monument text-2xl">
           <button
             className={`${
@@ -113,7 +113,7 @@ const Product = () => {
             Reviews
           </button>
         </div>
-        <div className="mt-[42px] mb-[198px] ">
+        <div className="mt-6 md:mt-[42px] mb-[198px] ">
           {selected === "description" && <Description product={product} />}
           {selected === "reviews" && <Reviews product={product} />}
         </div>

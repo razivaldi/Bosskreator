@@ -12,13 +12,13 @@ const Pricing = () => {
           We've got a <span className="text-accent">plan</span> that's
           <span className="text-accent"> perfect</span> for you
         </h1>
-        <div className="md:flex justify-between mt-5 w-[90%] mx-auto">
+        <div className="md:flex justify-between mt-5 w-[80%] md:w-[90%] mx-auto ">
           <p className="w-fit md:w-[740px] font-medium text-sm md:text-lg">
             Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis
             quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit
             ultrices nisl vitae.
           </p>
-          <button className="flex items-center font-medium text-nowrap bg-white-20 text-white py-4 px-[18px] shadow transition duration-200 ease-in-out transform hover:bg-[#171717]/90 active:scale-95 rounded-[30px]">
+          <button className="mt-2 md:mt-0 text-xs md:text-base mx-auto self-center flex items-center font-medium text-nowrap bg-white-20 text-white py-3 px-4 md:py-4 md:px-[18px] shadow transition duration-200 ease-in-out transform hover:bg-[#171717]/90 active:scale-95 rounded-[30px]">
             Contact Us
             <span className="ml-3">
               <FaArrowRight />
@@ -26,7 +26,7 @@ const Pricing = () => {
           </button>
         </div>
       </div>
-      <div className="w-[88%] mx-auto pb-8">
+      <div className="w-[80%] md:w-[88%] mx-auto pb-8">
         <div className="py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:items-center">
           <CardPrice />
           <CardPrice />

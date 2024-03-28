@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CTA = () => {
   return (
-    <section className="w-[90%] mx-auto bg-[#090918] p-8 md:p-16 rounded-2xl my-28">
+    <section className="w-[90%] mx-auto bg-[#090918] p-8 md:p-16 rounded-2xl my-10 md:my-28">
       <h2 className="inline-flex mb-8 text-center font-medium text-xl md:text-4xl">
         <span>
           <ImQuotesLeft />

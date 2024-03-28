@@ -22,7 +22,7 @@ const Article = ({ article }) => {
       }}
     >
       <div className="max-w-3xl mx-auto px-6">
-        <h1 className="font-monument text-4xl">{article.title}</h1>
+        <h1 className="font-monument text-xl md:text-4xl">{article.title}</h1>
         <p className="text-sm mt-2">
           Published{" "}
           {new Date(article.createdAt).toLocaleString("en-US", {
@@ -40,11 +40,17 @@ const Article = ({ article }) => {
           />
         </div>
         {article.content.map((item, index) => (
-          <p key={index} className="my-4 indent-12 text-justify">
+          <p
+            key={index}
+            className="my-4 indent-7 text-sm md:text-base md:indent-12 text-justify"
+          >
             {item.paragraph}
           </p>
         ))}
-        <div className="text-center relative z-10">
+        <div className="text-center relative">
+          <p className="my-4 font-medium italic underline text-accent">
+            backlink description
+          </p>
           <div className="grid lg:grid-cols-2 gap-3">
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
               <figure className="relative w-full h-60">
@@ -72,6 +78,9 @@ const Article = ({ article }) => {
                 alt="Image Description"
               />
             </figure>
+            <caption className="text-sm text-zinc-300">
+              some image description
+            </caption>
           </div>
         </div>
       </div>

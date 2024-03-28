@@ -45,14 +45,14 @@ const Service = () => {
             alt="laptop"
           />
         </div>
-        <div className="w-full lg:w-[44%] text-lg text-justify">
+        <div className="w-full lg:w-[44%] text-sm md:text-lg text-justify">
           <p>
             Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla
             odio nisl vitae. In aliquet pellentesque aenean hac vestibulum
             turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada
             fringilla.
           </p>
-          <h3 className="font-semibold text-accent text-3xl my-6">
+          <h3 className="font-semibold text-accent text-3xl my-4 md:my-6">
             Why we're better
           </h3>
           <p>
