@@ -29,11 +29,11 @@ const OurTeam = () => {
           Meet the <span className="text-accent">Minds</span> Behind Our Digital
           Mastery
         </h1>
-        <div className="grid gap-5 lg:gap-11 grid-cols-2 lg:grid-cols-4 justify-center">
+        <div className="grid gap-5 lg:gap-11 grid-cols-4 justify-center">
           {data.map(({ id, url }) => (
             <div
               key={id}
-              className=" h-[180px]  md:h-[230px] lg:h-[298px] relative"
+              className=" h-[100px] md:h-[200px] lg:h-[298px] relative"
               style={{ borderRadius: "20px", overflow: "hidden" }}
             >
               <Image src={url} fill className="object-cover" alt={""} />

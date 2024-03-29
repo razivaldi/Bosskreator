@@ -34,14 +34,12 @@ const variants = {
   open: {
     height: "auto",
     opacity: 1,
-    overflow: "visible",
     marginTop: 10,
     transition: { duration: 0.5 },
   },
   closed: {
     height: 0,
     opacity: 0,
-    overflow: "hidden",
     marginTop: 0,
     transition: { duration: 0.5 },
   },
@@ -64,12 +62,13 @@ const Support = () => {
             team.
           </p>
         </div>
+        {/* ACCORDION */}
         <div className="w-[85%] md:w-[90%] mx-auto flex items-stretch">
           <div className="lg:columns-2 space-y-4 mt-14 w-full">
             {accordion.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#191919] rounded-2xl py-8 hover:cursor-pointer break-inside-avoid-column"
+                className="bg-[#191919] overflow-hidden rounded-2xl py-8 hover:cursor-pointer break-inside-avoid-column"
                 onClick={() => setActive(active === i ? null : i)}
               >
                 <div className="w-full px-8 font-medium text-sm md:text-lg inline-flex items-center justify-between">

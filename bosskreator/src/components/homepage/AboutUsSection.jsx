@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const AboutUsSection = () => {
   return (
-    <motion.div className="w-full my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+    <motion.div className="w-full my-16 md:my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
       <SectionName>about us</SectionName>
       <div className="flex md:w-[90%] w-[85%] mx-auto">
         <svg className="w-4 h-40 mr-1.5 md:w-8 md:h-72 md:mr-6" viewBox="0 0 30 304" fill="none" xmlns="http://www.w3.org/2000/svg">

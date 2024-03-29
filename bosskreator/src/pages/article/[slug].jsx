@@ -21,8 +21,10 @@ const Article = ({ article }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-3xl mx-auto px-6">
-        <h1 className="font-monument text-xl md:text-4xl">{article.title}</h1>
+      <div className="max-w-4xl mx-auto px-6">
+        <h1 className="font-monument text-center mb-10 text-xl md:text-4xl">
+          {article.title}
+        </h1>
         <p className="text-sm mt-2">
           Published{" "}
           {new Date(article.createdAt).toLocaleString("en-US", {

@@ -108,10 +108,10 @@ const About = () => {
         </div>
         <div className="lg:flex lg:gap-12 px-8 max-w-7xl mx-auto">
           <div className="min-w-[300px]">
-            <h2 className="font-monument lg:text-[36px] text-center mb-6">
+            <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Vision
             </h2>
-            <p className="font-medium lg:text-sm text-justify">
+            <p className="font-medium text-xs md:text-sm text-justify">
               To be a leading digital agency, empowering businesses with
               innovative solutions that transcend the digital realm. We envision
               a future where our strategic insights, creative brilliance, and
@@ -119,8 +119,8 @@ const About = () => {
               our clients.
             </p>
           </div>
-          <div className="">
-            <h2 className="font-monument lg:text-[36px] text-center mb-6">
+          <div className="mt-8 lg:mt-0">
+            <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Mission
             </h2>
             <div className="flex  justify-center gap-5 md:gap-7 lg:gap-11 relative">
@@ -138,7 +138,7 @@ const About = () => {
                     }}
                     className="hidden md:flex"
                   ></div>
-                  <p className="font-medium text-xs lg:text-sm">{item.text}</p>
+                  <p className="font-medium text-xs md:text-sm">{item.text}</p>
                 </div>
               ))}
             </div>

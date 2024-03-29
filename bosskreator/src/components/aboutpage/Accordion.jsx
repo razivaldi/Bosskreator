@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaChevronUp } from "react-icons/fa6";
 
 const data = [
   {
@@ -21,73 +23,50 @@ const data = [
   },
 ];
 
-const Accordion = () => {
-  const [openAccordion, setOpenAccordion] = useState(null);
+const variants = {
+  open: {
+    height: "auto",
+    opacity: 1,
+    marginTop: 10,
+    transition: { duration: 0.5 },
+  },
+  closed: {
+    height: 0,
+    opacity: 0,
+    marginTop: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
-  const toggleAccordion = (accordionNumber) => {
-    if (openAccordion === accordionNumber) {
-      setOpenAccordion(null);
-    } else {
-      setOpenAccordion(accordionNumber);
-    }
-  };
+const Accordion = () => {
+  const [active, setActive] = useState(null);
 
   return (
-    <div className="lg:w-[600px] w-full">
-      {data.map((item) => (
-        <div key={item.id}>
-          <button
-            className="py-3 flex items-center justify-between gap-x-3 w-full font-semibold text-start"
-            aria-expanded={openAccordion === item.id}
-            onClick={() => toggleAccordion(item.id)}
-          >
-            <p>{item.title}</p>
-            {openAccordion === item.id ? (
-              <svg
-                className="size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 15l-6-6-6 6"></path>
-              </svg>
-            ) : (
-              <svg
-                className="size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m6 9 6 6 6-6"></path>
-              </svg>
-            )}
-          </button>
-          {/* <hr className={`${openAccordion === item.id ? 'hidden' : ''}`} /> */}
-          <div
-            className={`${
-              openAccordion === item.id ? "" : "hidden"
-            } w-full overflow-hidden transition-[height] duration-300`}
-            aria-labelledby={`${item.id}`}
-          >
-            <p className="">
-              This is accordion items body. It is shown or hidden by default,
-              depending on the state. These classes control the overall
-              appearance, as well as the showing and hiding via CSS transitions.
-            </p>
+    <div className="lg:w-[600px] w-full mb-10 lg:mb-0">
+      {data.map((item, i) => (
+        <div
+          key={i}
+          className="border-b overflow-hidden py-4 hover:cursor-pointer break-inside-avoid-column"
+          onClick={() => setActive(active === item.id ? null : item.id)}
+        >
+          <div className="w-full font-semibold text-sm md:text-lg inline-flex items-center justify-between">
+            {item.title}
+            <motion.span
+              initial={{ rotate: 0 }}
+              animate={{ rotate: active === item.id ? 180 : 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <FaChevronUp className="text-xl" />
+            </motion.span>
           </div>
-          <hr className="mb-2.5" />
+          <motion.p
+            key={i}
+            variants={variants}
+            animate={active === item.id ? "open" : "closed"}
+            className="text-sm md:text-base"
+          >
+            {item.content}
+          </motion.p>
         </div>
       ))}
     </div>

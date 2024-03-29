@@ -49,6 +49,7 @@ const Contact = () => {
                   type="text"
                   name="Name"
                   id="Name"
+                  required
                   class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Name"
                 />
@@ -59,9 +60,10 @@ const Contact = () => {
                   Phone Number
                 </label>
                 <input
-                  type="text"
+                  type="tel"
                   name="Phone"
                   id="Phone"
+                  required
                   class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
                   placeholder="Phone Number"
                 />
@@ -77,6 +79,7 @@ const Contact = () => {
                 name="Email"
                 id="Email"
                 autocomplete="email"
+                required
                 class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
                 placeholder="Email"
               />

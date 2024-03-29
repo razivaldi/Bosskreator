@@ -40,13 +40,13 @@ const cardVariants = {
 const WhyUs = () => {
   return (
     <motion.div
-      className="w-full my-20 relative"
+      className="w-full md:my-20 relative"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <div className="w-full mt-20 mb-9 relative">
+      <div className="w-full mb-9 relative">
         <SectionName>why us</SectionName>
         <div className="flex w-[90%] mx-auto">
           <svg
@@ -101,6 +101,7 @@ const WhyUs = () => {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    sizes="100vh"
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform transform ease-in-out"
                   />
