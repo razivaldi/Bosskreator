@@ -15,7 +15,7 @@ export async function getServerSideProps(context) {
 
 const Service = () => {
   return (
-    <div className="mt-[87px] ">
+    <div className="mt-[87px]">
       <div className="w-full h-[468px] flex items-center relative">
         <Image
           src="/bg-service.png"
@@ -53,7 +53,7 @@ const Service = () => {
             fringilla.
           </p>
           <h3 className="font-semibold text-accent text-3xl my-4 md:my-6">
-            Why we're better
+            Why we&apos;re better
           </h3>
           <p>
             Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam

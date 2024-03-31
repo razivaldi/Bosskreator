@@ -9,7 +9,7 @@ const Pricing = () => {
       <div className="w-full relative">
         <SectionName>pricing</SectionName>
         <h1 className="font-monument text-2xl md:text-[50px] leading-[1.32] text-center w-4/5 md:w-8/12 mx-auto">
-          We've got a <span className="text-accent">plan</span> that's
+          We&apos;ve got a <span className="text-accent">plan</span> that&apos;s
           <span className="text-accent"> perfect</span> for you
         </h1>
         <div className="md:flex justify-between mt-5 w-[80%] md:w-[90%] mx-auto ">
