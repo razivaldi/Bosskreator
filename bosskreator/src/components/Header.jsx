@@ -47,7 +47,7 @@ const sideBarItemsVariants = {
   },
 };
 
-export default function Navbar () {
+export default function Header () {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);

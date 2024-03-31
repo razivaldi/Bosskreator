@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { Manrope } from "next/font/google";
 import localFont from 'next/font/local';
 import "@/styles/globals.css";
 import Head from "next/head";
+import Header from "@/components/Header";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const monument = localFont({
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="Turning Ideas into Intuitive Digital Experiences."></meta>
       </Head>
       <main className={`${manrope.className} ${monument.variable} overflow-hidden`}>
-        <Navbar />
+        <Header/>
         <Component {...pageProps} />
         <Footer />
       </main>
