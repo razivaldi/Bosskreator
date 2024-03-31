@@ -6,16 +6,17 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        monument: ["var(--font-monument)",],
+      },
+      colors: {
+        'accent': '#5D5FEF',
+        'white-20': 'rgba(255, 255, 255, 0.2)',
+        'card-bg': 'rgba(3, 8, 50, 0.8)',
+        'card-active': '#5D5FEF',
+        'card-bg': '#030832',
+      },
+    },
   },
-  daisyui: {
-    themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "dark", // name of one of the included themes for dark mode
-    base: false, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ":root", // The element that receives theme color CSS variables
-  },
-  plugins: [require("daisyui")],
 };
