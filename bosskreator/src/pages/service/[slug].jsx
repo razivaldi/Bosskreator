@@ -3,15 +3,15 @@ import CTA from "@/components/servicepage/CTA";
 import Pricing from "@/components/servicepage/Pricing";
 import Support from "@/components/servicepage/Support";
 
-export async function getServerSideProps(context) {
-  const { slug } = context.params;
-  const res = await fetch(`http://localhost:3000/api/article/${slug}`);
-  const data = await res.json();
+// export async function getServerSideProps(context) {
+//   const { slug } = context.params;
+//   const res = await fetch(`http://localhost:3000/api/article/${slug}`);
+//   const data = await res.json();
 
-  return {
-    props: { article: data },
-  };
-}
+//   return {
+//     props: { article: data },
+//   };
+// }
 
 const Service = () => {
   return (
