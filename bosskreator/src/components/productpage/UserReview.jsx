@@ -13,7 +13,7 @@ const review = {
 
 const UserReview = () => {
   return (
-    <div className="relative z-10">
+    <div>
       <div className="flex gap-4 items-center ">
         <div className="relative rounded-full w-[50px] h-[50px] overflow-hidden">
           <Image
@@ -23,25 +23,31 @@ const UserReview = () => {
             fill
           />
         </div>
-        <div>
-          <p>{review.name}</p>
-          <p>{review.email}</p>
-        </div>
-        <div>
-          {Array.from({ length: 5 }, (_, i) => (
-            <span
-              key={i}
-              className={`${
-                i < review.star ? "text-yellow-500" : "text-gray-300"
-              } inline-block ml-2 text-2xl`}
-            >
-              <FaStar />
-            </span>
-          ))}
+        <div className="flex flex-col sm:flex-row gap-1">
+          <div>
+            <p>{review.name}</p>
+            <p>{review.email}</p>
+          </div>
+          <div className="">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span
+                key={i}
+                className={`${
+                  i < review.star ? "text-yellow-500" : "text-gray-300"
+                } inline-block mr-2 md:text-2xl`}
+              >
+                <FaStar />
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-      <p className="my-6 font-medium text-xl">{review.text}</p>
-      <p className="text-[#A5A6F6] font-medium text-xl">{review.createdAt}</p>
+      <p className="my-2 md:my-6 font-medium text-xs md:text-xl">
+        {review.text}
+      </p>
+      <p className="text-[#A5A6F6] font-medium text-xs md:text-xl">
+        {review.createdAt}
+      </p>
     </div>
   );
 };

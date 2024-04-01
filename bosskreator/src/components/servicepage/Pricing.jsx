@@ -33,7 +33,7 @@ const data = [
       "Monthly work ship with us!",
       "Unlimited design for your business",
       "10 Free feed videos",
-      "Design with caption and hashtag",
+      "Design with Caption and hashtag",
       "We help you to handle your instagram business!",
       "Free Unlimited revision.",
     ],

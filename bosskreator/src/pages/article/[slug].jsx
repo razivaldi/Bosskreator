@@ -11,6 +11,7 @@ export async function getServerSideProps(context) {
 }
 
 const Article = ({ article }) => {
+  console.log(article);
   return (
     <main
       className="w-full mb-20 pt-[119px]"
@@ -21,7 +22,7 @@ const Article = ({ article }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl w-11/12 mx-auto px-6">
         <h1 className="font-monument text-center mb-10 text-xl md:text-4xl">
           {article.title}
         </h1>
@@ -80,10 +81,10 @@ const Article = ({ article }) => {
                 alt="Image Description"
               />
             </figure>
-            <caption className="text-sm text-zinc-300">
-              some image description
-            </caption>
           </div>
+          <span className="text-sm text-zinc-300 col-span-2 mt-3">
+            working space description
+          </span>
         </div>
       </div>
     </main>

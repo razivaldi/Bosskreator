@@ -67,15 +67,15 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-x-20 flex-wrap gap-3 md:justify-between md:w-[90%] lg:w-auto z-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 justify-between w-full gap-3 z-10">
           {menuItems.map((section, index) => (
-            <div key={index}>
+            <div key={index} className="min-w-[120px] justify-self-center">
               <h3 className="text-xl font-semibold pb-4">{section.title}</h3>
               {section.links.map((link, idx) => (
                 <Link
                   key={idx}
                   href={link.href}
-                  className="text-sm block text-nowrap pb-4 hover:underline"
+                  className="text-sm block text-nowrap py-2 hover:underline"
                 >
                   {link.text}
                 </Link>

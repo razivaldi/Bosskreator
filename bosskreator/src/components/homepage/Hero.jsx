@@ -31,6 +31,7 @@ const Hero = () => {
         fill
         sizes="100vw"
         alt="hero image"
+        priority
         style={{ objectFit: "cover", zIndex: -1 }}
       />
       <motion.div

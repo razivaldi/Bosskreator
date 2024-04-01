@@ -70,12 +70,15 @@ const ServiceSection = () => {
                 magnis quam ullamcorper eget leo. Sed diam lacus ultrices
                 egestas elit ultrices nisl vitae.
               </p>
-              <button className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">
+              <Link
+                href={"/service/A"}
+                className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95"
+              >
                 Explore Our Service
                 <span className="ml-1.5 nd:ml-3">
                   <FaArrowRight />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -38,7 +38,7 @@ const Product = () => {
         <ImageGallery images={product.images} />
         {/* RIGHT SIDE */}
         <div
-          className={`flex flex-col mt-10 lg:mt-0 gap-4 lg:gap-8 mx-10 lg:mx-0 lg:w-full`}
+          className={`flex flex-col mt-10 lg:mt-0 gap-4 lg:gap-8 mx-5 sm:w-4/5 sm:mx-auto lg:mx-0 lg:w-full`}
         >
           <p
             className={`text-xs font-semibold w-fit rounded px-6 py-2 ${
@@ -92,8 +92,8 @@ const Product = () => {
         </div>
       </section>
       {/* DESCRIPION & REVIEW SECTION */}
-      <section className="max-w-[1030px] mx-10 lg:mx-auto mt-10 md:mt-[72px]">
-        <div className="font-monument text-2xl">
+      <section className="max-w-[1030px] mx-5 sm:w-4/5 sm:mx-auto lg:mx-auto mt-10 md:mt-[72px]">
+        <div className="font-monument text-lg md:text-2xl">
           <button
             className={`${
               selected === "description" &&
