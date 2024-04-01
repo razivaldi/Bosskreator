@@ -9,15 +9,15 @@ import { FaArrowRight } from "react-icons/fa6";
 const data = [
   {
     id: 1,
-    text: "Transforming Digital Landscapes, One Innovation",
+    text: "Become a Leader in the Digital Marketing Industry",
   },
   {
     id: 2,
-    text: "Pioneering Digital Excellence for Impact",
+    text: "Provide High Quality Services",
   },
   {
     id: 3,
-    text: "Unleashing Possibilities in the Digital Realm",
+    text: "Building Long Term Relationships with Clients",
   },
 ];
 const About = () => {
@@ -107,11 +107,11 @@ const About = () => {
           ></div>
         </div>
         <div className="lg:flex lg:gap-12 px-8 max-w-7xl mx-auto">
-          <div className="min-w-[300px]">
+          <div className="w-fit">
             <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Vision
             </h2>
-            <p className="font-medium text-xs md:text-sm text-justify">
+            <p className="font-medium text-xs md:text-base text-justify">
               To be a leading digital agency, empowering businesses with
               innovative solutions that transcend the digital realm. We envision
               a future where our strategic insights, creative brilliance, and
@@ -123,10 +123,10 @@ const About = () => {
             <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Mission
             </h2>
-            <div className="flex  justify-center gap-5 md:gap-7 lg:gap-11 relative">
+            <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 lg:gap-11 relative ">
               {data.map((item) => (
                 <div
-                  className="flex items-center bg-white-20 w-[203px] px-[18px] py-6 gap-3 rounded-lg"
+                  className="flex items-center bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
                   key={item.id}
                 >
                   <div
@@ -134,9 +134,8 @@ const About = () => {
                       width: "28px",
                       height: "28px",
                       background: "#FFF2ED",
-                      flex: "none",
+                      aspectRatio: "1/1",
                     }}
-                    className="hidden md:flex"
                   ></div>
                   <p className="font-medium text-xs md:text-sm">{item.text}</p>
                 </div>

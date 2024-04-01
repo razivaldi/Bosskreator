@@ -28,7 +28,7 @@ const Service = () => {
           <h1 className="font-monument text-2xl md:text-[48px] mb-6 mt-3">
             Development
           </h1>
-          <p className="w-screen md:w-[768px] mx-auto md:text-xl">
+          <p className="w-screen md:w-[768px] px-5 md:mx-auto md:text-xl">
             Introduction to Wireframing and its Principles. Learn from the best
             in the industry with tips, tools, and best practices from those in
             the know.

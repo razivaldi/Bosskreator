@@ -3,6 +3,43 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import CardPrice from "@/components/servicepage/CardPrice";
 import SectionName from "@/components/SectionName";
 
+const data = [
+  {
+    name: "Bronze Package",
+    price: "500 rb",
+    list: [
+      "20 Design Content Feed & Story",
+      "Design with Caption & Hashtag",
+      "Fresh Content everyday",
+      "Free unlimited revisions",
+    ],
+  },
+  {
+    name: "Silver Package",
+    price: "800 rb",
+    list: [
+      "30 Design Content Feed & Story",
+      "3 Feed Videos",
+      "Design with Caption & Hashtag",
+      "Fresh Content everyday",
+      "Free unlimited revisions",
+      "Basic Content strategy consultation",
+    ],
+  },
+  {
+    name: "Gold Package",
+    price: "1.5 Jt",
+    list: [
+      "Monthly work ship with us!",
+      "Unlimited design for your business",
+      "10 Free feed videos",
+      "Design with caption and hashtag",
+      "We help you to handle your instagram business!",
+      "Free Unlimited revision.",
+    ],
+  },
+];
+
 const Pricing = () => {
   return (
     <section className="w-full relative bg-[#191919] pt-8">
@@ -27,10 +64,10 @@ const Pricing = () => {
         </div>
       </div>
       <div className="w-[80%] md:w-[88%] mx-auto pb-8">
-        <div className="py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:items-center">
-          <CardPrice />
-          <CardPrice />
-          <CardPrice />
+        <div className="py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:items-stretch">
+          {data.map((item) => (
+            <CardPrice key={item.name} {...item} />
+          ))}
         </div>
       </div>
     </section>

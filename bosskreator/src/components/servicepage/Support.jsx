@@ -110,7 +110,7 @@ const Support = () => {
             />
           </svg>
         </div>
-        <div className="w-[80%] md:w-[90%] mx-auto mt-5 md:flex justify-between">
+        <div className="w-[80%] md:w-[90%] mx-auto mt-5 md:flex items-center justify-between">
           <div>
             <p className="font-semibold text-sm md:text-xl">
               Still have questions?
