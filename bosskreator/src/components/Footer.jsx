@@ -8,8 +8,8 @@ const menuItems = [
     title: "Navigation",
     links: [
       { text: "Home", href: "/" },
-      { text: "About", href: "/" },
-      { text: "Product", href: "/" },
+      { text: "About", href: "/about" },
+      { text: "Product", href: "/product" },
     ],
   },
   {
@@ -37,8 +37,8 @@ const Footer = () => {
         className="absolute w-[500px] h-[500px] bg-[#171717] -top-40 -left-40"
         style={{ borderRadius: "38%", transform: "rotate(30deg)" }}
       ></span>
-      <div className="w-[90%] pt-9 pb-4 mx-auto text-white flex flex-wrap flex-row justify-around -z-10">
-        <div className="w-full md:w-[60%] text-center lg:text-left lg:w-[40%] z-0">
+      <div className="w-[90%] pt-9 pb-4 mx-auto relative text-white lg:flex justify-around z-10">
+        <div className="w-full sm:w-[60%] mx-auto text-center lg:text-left lg:w-[40%]">
           <div className="relative h-[50px] w-[211px] mx-auto lg:-ml-4">
             <Image
               src="https://ik.imagekit.io/m1akscp5q/Boss%20Kreator%20logo.png?updatedAt=1709446059844"

@@ -36,7 +36,13 @@ const OurTeam = () => {
               className="aspect-square sm:w-full h-[298px] relative mx-auto"
               style={{ borderRadius: "20px", overflow: "hidden" }}
             >
-              <Image src={url} fill className="object-cover" alt={""} />
+              <Image
+                src={url}
+                fill
+                className="object-cover"
+                alt={""}
+                sizes="(100vw, 100vh)"
+              />
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionName from "@/components/SectionName";
 import { FiPlusCircle } from "react-icons/fi";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const accordion = [
   {
@@ -120,9 +121,12 @@ const Support = () => {
               friendly team.
             </p>
           </div>
-          <button className="px-4 py-3 md:px-8 md:py-4 text-sm md:text-base mx-auto bg-accent text-white rounded-full mr-16">
+          <Link
+            href={"/contact"}
+            className="px-4 py-3 md:px-8 md:py-4 text-sm md:text-base mx-auto bg-accent hover:bg-accent/90 text-white rounded-full mr-16"
+          >
             Get in Touch
-          </button>
+          </Link>
         </div>
       </div>
     </section>

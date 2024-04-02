@@ -34,7 +34,7 @@ const CardPrice = ({ name, price, list }) => {
       </div>
 
       <Link
-        className="mt-8 md:mt-16 py-3 px-4 inline-flex justify-center items-center text-sm font-semibold rounded-full border border-transparent bg-accent disabled:opacity-50 disabled:pointer-events-none"
+        className="mt-8 md:mt-16 py-3 px-4 inline-flex justify-center items-center text-sm font-semibold rounded-full border border-transparent bg-accent hover:bg-accent/90 disabled:opacity-50 disabled:pointer-events-none"
         href="#"
       >
         Get Started

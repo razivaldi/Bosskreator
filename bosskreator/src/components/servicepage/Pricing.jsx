@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import CardPrice from "@/components/servicepage/CardPrice";
 import SectionName from "@/components/SectionName";
+import Link from "next/link";
 
 const data = [
   {
@@ -49,18 +50,21 @@ const Pricing = () => {
           We&apos;ve got a <span className="text-accent">plan</span> that&apos;s
           <span className="text-accent"> perfect</span> for you
         </h1>
-        <div className="md:flex justify-between mt-5 w-[80%] md:w-[90%] mx-auto ">
+        <div className="md:flex justify-between items-center mt-5 w-[80%] md:w-[90%] mx-auto">
           <p className="w-fit md:w-[740px] font-medium text-sm md:text-lg">
             Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis
             quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit
             ultrices nisl vitae.
           </p>
-          <button className="mt-2 md:mt-0 text-xs md:text-base mx-auto self-center flex items-center font-medium text-nowrap bg-white-20 text-white py-3 px-4 md:py-4 md:px-[18px] shadow transition duration-200 ease-in-out transform hover:bg-[#171717]/90 active:scale-95 rounded-[30px]">
+          <Link
+            href={"/contact"}
+            className="mt-2 md:mt-0 text-xs w-fit md:text-base flex items-center font-medium text-nowrap bg-white-20 text-white py-3 px-4 md:py-4 md:px-[18px] shadow transition duration-200 ease-in-out transform hover:bg-white/30 active:scale-95 rounded-[30px]"
+          >
             Contact Us
             <span className="ml-3">
               <FaArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
       <div className="w-[80%] md:w-[88%] mx-auto pb-8">

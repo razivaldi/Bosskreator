@@ -72,7 +72,7 @@ const ServiceSection = () => {
               </p>
               <Link
                 href={"/service/A"}
-                className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95"
+                className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 inline-flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95"
               >
                 Explore Our Service
                 <span className="ml-1.5 nd:ml-3">
