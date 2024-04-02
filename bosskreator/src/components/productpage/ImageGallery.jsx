@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const ImageGallery = ({ images }) => {
+export default function ImageGallery ({ images }) {
   const [main, setMain] = useState(0);
 
   return (
@@ -37,5 +37,3 @@ const ImageGallery = ({ images }) => {
     </div>
   );
 };
-
-export default ImageGallery;

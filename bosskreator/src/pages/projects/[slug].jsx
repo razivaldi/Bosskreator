@@ -10,7 +10,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-const Article = ({ article }) => {
+export default function Projects ({ article }) {
   return (
     <main className="w-full mb-20 pt-[119px]" style={{ backgroundImage: 'linear-gradient(180deg, #1E1E1E 12.88%, rgba(0, 0, 0, 0) 100%)', backgroundSize: '100% 860px', backgroundRepeat: 'no-repeat' }}>
       <div className="max-w-3xl mx-auto">
@@ -24,5 +24,3 @@ const Article = ({ article }) => {
     </main>
   );
 };
-
-export default Article;

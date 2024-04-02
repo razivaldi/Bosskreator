@@ -11,7 +11,7 @@ const review = {
   createdAt: "January 17, 2024",
 };
 
-const UserReview = () => {
+export default function UserReview () {
   return (
     <div>
       <div className="flex gap-4 items-center ">
@@ -51,5 +51,3 @@ const UserReview = () => {
     </div>
   );
 };
-
-export default UserReview;

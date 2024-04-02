@@ -37,7 +37,7 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const WhyUs = () => {
+export default function WhyUs () {
   return (
     <motion.div
       className="w-full md:my-20 relative"
@@ -113,7 +113,7 @@ const WhyUs = () => {
                   <p className="text-[7px] py-1.5 md:pt-4 md:text-sm font-medium">
                     {item.desc}
                   </p>
-                  <p className="flex items-center text-accentx">
+                  <p className="flex items-center text-[7px] font-medium md:text-sm">
                     Read More
                     <span className="ml-3">
                       <FaChevronRight />
@@ -129,4 +129,3 @@ const WhyUs = () => {
   );
 };
 
-export default WhyUs;

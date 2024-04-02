@@ -4,7 +4,7 @@ import OurValues from "@/components/aboutpage/OurValues";
 import WhoWeAre from "@/components/aboutpage/WhoWeAre";
 import React from "react";
 
-const About = () => {
+export default function About () {
   return (
     <main
       className="w-full mb-20 pt-[119px]"
@@ -32,4 +32,3 @@ const About = () => {
   );
 };
 
-export default About;

@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const Banner = () => {
+export default function Banner () {
   return (
     <section className="mb-20">
       <motion.div
@@ -36,5 +36,3 @@ const Banner = () => {
     </section>
   );
 };
-
-export default Banner;

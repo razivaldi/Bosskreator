@@ -29,7 +29,7 @@ const data = [
     position: "Frontend Developer",
   },
 ];
-const OurTeam = () => {
+export default function OurTeam () {
   return (
     <section className="relative mb-14">
       <SectionName>our team</SectionName>
@@ -69,5 +69,3 @@ const OurTeam = () => {
     </section>
   );
 };
-
-export default OurTeam;

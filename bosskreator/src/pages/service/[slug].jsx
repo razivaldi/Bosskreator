@@ -13,7 +13,7 @@ import Support from "@/components/servicepage/Support";
 //   };
 // }
 
-const Service = () => {
+export default function Service() {
   return (
     <div className="mt-[87px]">
       <div className="w-full h-[468px] flex items-center relative">
@@ -76,6 +76,4 @@ const Service = () => {
       <Support />
     </div>
   );
-};
-
-export default Service;
+}

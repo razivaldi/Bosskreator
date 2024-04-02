@@ -33,7 +33,7 @@ const data = [
   },
 ];
 
-const CTA = () => {
+export default function CTA () {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -94,5 +94,3 @@ const CTA = () => {
     </section>
   );
 };
-
-export default CTA;

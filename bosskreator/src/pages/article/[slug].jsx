@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export async function getServerSideProps(context) {
   const { slug } = context.params;
-  const res = await fetch(`http://localhost:3000/api/article/${slug}`);
+  const res = await fetch(`http://bosskreator.vercel.app/api/article/${slug}`);
   const data = await res.json();
 
   return {
@@ -10,8 +10,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-const Article = ({ article }) => {
-  console.log(article);
+export default function Article ({ article }) {
   return (
     <main
       className="w-full mb-20 pt-[119px]"
@@ -90,5 +89,3 @@ const Article = ({ article }) => {
     </main>
   );
 };
-
-export default Article;

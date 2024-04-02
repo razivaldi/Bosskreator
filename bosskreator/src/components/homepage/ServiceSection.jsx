@@ -29,7 +29,7 @@ const data = [
   },
 ];
 
-const ServiceSection = () => {
+export default function ServiceSection () {
   const [defaultImage, setDefaultImage] = useState("/phone.png");
 
   return (
@@ -137,5 +137,3 @@ const ServiceSection = () => {
     </motion.div>
   );
 };
-
-export default ServiceSection;

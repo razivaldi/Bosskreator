@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 import Image from "next/image";
 import SectionName from "../SectionName";
 
-const OurValues = () => {
+export default function OurValues () {
   return (
     <section className="relative mb-[101px]">
       <SectionName>our values</SectionName>
@@ -34,4 +34,3 @@ const OurValues = () => {
   );
 };
 
-export default OurValues;

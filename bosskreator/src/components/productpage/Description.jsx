@@ -1,4 +1,4 @@
-const Description = ({ product }) => {
+export default function Description ({ product }) {
   return (
     <div className="relative z-10">
       <p className="indent-8 font-medium text-xs md:text-xl">{product.description}</p>
@@ -14,5 +14,3 @@ const Description = ({ product }) => {
     </div>
   );
 };
-
-export default Description;

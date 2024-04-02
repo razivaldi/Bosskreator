@@ -9,13 +9,6 @@
   box-sizing: border-box;
   color: white;
 }
-
-*,
-html {
-  scroll-behavior: smooth;
-  /* border: 1px red solid; */
-}
-
 body.sidebar-open {
   overflow: hidden;
 }

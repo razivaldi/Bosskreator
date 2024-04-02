@@ -4,7 +4,7 @@ import SectionName from "../SectionName";
 import { motion } from "framer-motion"
 import Link from "next/link";
 
-const AboutUsSection = () => {
+export default function AboutUsSection () {
   return (
     <motion.div className="w-full my-16 md:my-20 relative" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
       <SectionName>about us</SectionName>
@@ -27,5 +27,3 @@ const AboutUsSection = () => {
     </motion.div>
   )
 };
-
-export default AboutUsSection;

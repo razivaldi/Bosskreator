@@ -30,7 +30,7 @@ const menuItems = [
   },
 ];
 
-const Footer = () => {
+export default function Footer () {
   return (
     <div className="bg-[#1E1E1E] relative overflow-hidden">
       <span
@@ -95,5 +95,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

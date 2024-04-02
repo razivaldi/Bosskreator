@@ -46,7 +46,7 @@ const variants = {
   },
 };
 
-const Support = () => {
+export default function Support () {
   const [active, setActive] = useState(null);
 
   return (
@@ -132,5 +132,3 @@ const Support = () => {
     </section>
   );
 };
-
-export default Support;

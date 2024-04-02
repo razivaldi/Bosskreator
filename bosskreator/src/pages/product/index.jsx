@@ -60,7 +60,7 @@ const products = [
   },
 ];
 
-const Product = () => {
+export default function Products () {
   const [selected, setSelected] = useState("All");
   const router = useRouter();
 
@@ -170,5 +170,3 @@ const Product = () => {
     </main>
   );
 };
-
-export default Product;

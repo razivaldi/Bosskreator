@@ -1,9 +1,6 @@
 import {
   FaArrowRight,
   FaChartSimple,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
 } from "react-icons/fa6";
 import { LuHeartHandshake } from "react-icons/lu";
 import { IoDiamond } from "react-icons/io5";

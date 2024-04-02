@@ -1,7 +1,7 @@
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { TbMapPinFilled } from "react-icons/tb";
 
-const Contact = () => {
+export default function Contact () {
   return (
     <main className="w-full pb-14 pt-[119px] bg-gradient-to-b from-[#1E1E1E] to-white/25 ">
       <div className="w-[80%] mx-auto text-center mb-10">
@@ -39,10 +39,10 @@ const Contact = () => {
           </div>
         </div>
         <form className="flex-grow">
-          <div class="grid gap-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="Name" class="sr-only">
+                <label htmlFor="Name" className="sr-only">
                   Name
                 </label>
                 <input
@@ -50,13 +50,13 @@ const Contact = () => {
                   name="Name"
                   id="Name"
                   required
-                  class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none"
+                  className="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Name"
                 />
               </div>
 
               <div>
-                <label for="Phone" class="sr-only">
+                <label htmlFor="Phone" className="sr-only">
                   Phone Number
                 </label>
                 <input
@@ -64,45 +64,45 @@ const Contact = () => {
                   name="Phone"
                   id="Phone"
                   required
-                  class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
+                  className="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
                   placeholder="Phone Number"
                 />
               </div>
             </div>
 
             <div>
-              <label for="Email" class="sr-only">
+              <label htmlFor="Email" className="sr-only">
                 Email
               </label>
               <input
                 type="email"
                 name="Email"
                 id="Email"
-                autocomplete="email"
+                autoComplete="email"
                 required
-                class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
+                className="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
                 placeholder="Email"
               />
             </div>
 
             <div>
-              <label for="Message" class="sr-only">
+              <label htmlFor="Message" className="sr-only">
                 Details
               </label>
               <textarea
                 id="Message"
                 name="Message"
                 rows="7"
-                class="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
+                className="py-3 px-4 block w-full rounded-xl text-sm text-black disabled:opacity-50 disabled:pointer-events-none "
                 placeholder="Message"
               ></textarea>
             </div>
           </div>
 
-          <div class="mt-4 grid">
+          <div className="mt-4 grid">
             <button
               type="submit"
-              class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-xl bg-[#111111] hover:bg-[#111111]/60 disabled:opacity-50 disabled:pointer-events-none"
+              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-xl bg-[#111111] hover:bg-[#111111]/60 disabled:opacity-50 disabled:pointer-events-none"
             >
               Send Message
             </button>
@@ -112,5 +112,3 @@ const Contact = () => {
     </main>
   );
 };
-
-export default Contact;

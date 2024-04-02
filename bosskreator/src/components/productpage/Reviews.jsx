@@ -1,6 +1,6 @@
 import UserReview from "./UserReview";
 
-const Reviews = () => {
+export default function Reviews () {
   return (
     <div className="divide-y">
       {Array.from({ length: 2 }, (_, i) => (
@@ -11,5 +11,3 @@ const Reviews = () => {
     </div>
   );
 };
-
-export default Reviews;

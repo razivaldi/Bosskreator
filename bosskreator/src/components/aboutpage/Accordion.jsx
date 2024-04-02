@@ -38,7 +38,7 @@ const variants = {
   },
 };
 
-const Accordion = () => {
+export default function Accordion () {
   const [active, setActive] = useState(null);
 
   return (
@@ -72,5 +72,3 @@ const Accordion = () => {
     </div>
   );
 };
-
-export default Accordion;

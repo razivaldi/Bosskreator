@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-const Pricing = () => {
+export default function Pricing () {
   return (
     <section className="w-full relative bg-[#191919] pt-8">
       <div className="w-full relative">
@@ -77,5 +77,3 @@ const Pricing = () => {
     </section>
   );
 };
-
-export default Pricing;
