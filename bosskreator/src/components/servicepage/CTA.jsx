@@ -66,14 +66,12 @@ const CTA = () => {
         </button>
         {data.map((item, index) => (
           <div
+            key={item.id}
             className={`flex flex-col items-center ${
               index === currentIndex ? "" : "hidden"
             }`}
           >
-            <div
-              key={item.id}
-              className="w-14 h-14 rounded-full overflow-hidden relative mb-4"
-            >
+            <div className="w-14 h-14 rounded-full overflow-hidden relative mb-4">
               <Image
                 src={item.imageUrl}
                 fill

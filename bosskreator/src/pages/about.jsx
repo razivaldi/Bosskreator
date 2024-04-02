@@ -24,9 +24,7 @@ const About = () => {
           Any question or remarks? React out to us!
         </p>
       </div>
-      {/* WHO WE ARE */}
       <WhoWeAre />
-      {/* END OF CARD */}
       <OurValues />
       <OurTeam />
       <Banner />

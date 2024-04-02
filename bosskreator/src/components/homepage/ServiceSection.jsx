@@ -14,15 +14,15 @@ const data = [
     image: "/code.jpg",
   },
   {
-    number: "01",
-    title: "Development",
+    number: "02",
+    title: "Design",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cum quia, veritatis distinctio fugit impedit magni commodi rerum dolorum earum aliquid illum consectetur a dicta nam possimus necessitatibus in laborum?",
     image: "/phone.png",
   },
   {
-    number: "01",
-    title: "Development",
+    number: "03",
+    title: "Brand Strategy",
     description:
       "Lorem ipsum dolor sit amet consectetur. Scelerisque massa scelerisque cursus venenatis posuere volutpat. Morbi libero sit posuere ipsum. Vitae diam auctor at imperdiet faucibus sit.",
     image: "/client.png",
@@ -92,6 +92,7 @@ const ServiceSection = () => {
               src={defaultImage}
               alt="services"
               fill
+              sizes="(100vw, 100vh)"
               style={{ objectFit: "cover", borderRadius: "20px" }}
             />
           </div>

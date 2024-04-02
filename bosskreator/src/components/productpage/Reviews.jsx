@@ -1,4 +1,3 @@
-import React from "react";
 import UserReview from "./UserReview";
 
 const Reviews = () => {

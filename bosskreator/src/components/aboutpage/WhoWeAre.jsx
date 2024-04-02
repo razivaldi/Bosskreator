@@ -1,19 +1,32 @@
-import { FaArrowRight } from "react-icons/fa6";
+import {
+  FaArrowRight,
+  FaChartSimple,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa6";
+import { LuHeartHandshake } from "react-icons/lu";
+import { IoDiamond } from "react-icons/io5";
+
 import SectionName from "../SectionName";
 import Image from "next/image";
+import Link from "next/link";
 
 const data = [
   {
     id: 1,
     text: "Become a Leader in the Digital Marketing Industry",
+    icon: <FaChartSimple />,
   },
   {
     id: 2,
     text: "Provide High Quality Services",
+    icon: <IoDiamond />,
   },
   {
     id: 3,
     text: "Building Long Term Relationships with Clients",
+    icon: <LuHeartHandshake />,
   },
 ];
 
@@ -46,16 +59,22 @@ export default function WhoWeAre() {
             <hr className="my-3" />
             <div className="flex w-full justify-between items-center lg:block lg:w-[45%]">
               <p className="line-clamp-3 text-xs md:text-lg font-medium w-4/6 lg:w-full lg:mb-5">
-                Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut
-                magnis quam ullamcorper eget leo. Sed diam lacus ultrices
-                egestas elit ultrices nisl vitae.
+                Boss Kreator is a digital marketing company committed to
+                providing innovative and effective marketing solutions to our
+                clients. We offer a variety of services, including social media
+                strategy, digital advertising, content creation and performance
+                analysis, to help businesses achieve their goals in the digital
+                space.
               </p>
-              <button className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">
-                Explore Our Service
+              <Link
+                href={"/service/A"}
+                className="rounded-full w-fit bg-white-20 px-3 py-2 md:py-3.5 md:px-4 flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out hover:bg-white/10 active:scale-95"
+              >
+                Learn More
                 <span className="ml-1.5 nd:ml-3">
                   <FaArrowRight />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -102,21 +121,14 @@ export default function WhoWeAre() {
             <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Mission
             </h2>
-            <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 lg:gap-11 relative ">
+            <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 xl:gap-11 ">
               {data.map((item) => (
                 <div
-                  className="flex items-center bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
+                  className="flex items-center justify-center h-full bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
                   key={item.id}
                 >
-                  <div
-                    style={{
-                      width: "28px",
-                      height: "28px",
-                      background: "#FFF2ED",
-                      aspectRatio: "1/1",
-                    }}
-                  ></div>
-                  <p className="font-medium text-xs md:text-sm">{item.text}</p>
+                  <span className="text-2xl">{item.icon}</span>
+                  <p className="font-medium text-xs md:text-sm ">{item.text}</p>
                 </div>
               ))}
             </div>

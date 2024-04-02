@@ -24,7 +24,7 @@ const UserReview = () => {
           />
         </div>
         <div className="flex flex-col sm:flex-row gap-1">
-          <div>
+          <div className="text-xs md:text-base">
             <p>{review.name}</p>
             <p>{review.email}</p>
           </div>
