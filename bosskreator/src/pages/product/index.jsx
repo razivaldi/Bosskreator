@@ -1,11 +1,11 @@
 import Banner from "@/components/Banner";
 import FilterButton from "@/components/productpage/FilterButton";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { FiFileText } from "react-icons/fi";
 import { FaRegClock } from "react-icons/fa6";
+import Link from "next/link";
 
 const products = [
   {
@@ -60,9 +60,8 @@ const products = [
   },
 ];
 
-export default function Products () {
+export default function Products() {
   const [selected, setSelected] = useState("All");
-  const router = useRouter();
 
   return (
     <main
@@ -104,13 +103,13 @@ export default function Products () {
           .filter((product) =>
             selected === "All" ? product : product.tag === selected
           )
-          .map((product, index) => (
-            <div
+          .map((product) => (
+            <Link
+              href={`/product/${product.id}`}
               key={product.id}
               className={`rounded-[24px] overflow-hidden ${
                 product.tag === "Ebook" ? "bg-[#212121]/80" : "bg-[#030832]/80"
-              } hover:cursor-pointer hover:scale-[1.02] transition ease-in-out`}
-              onClick={() => router.push(`/product/${product.id}`)}
+              } hover:cursor-pointer hover:bg-card-active transition ease-in-out`}
             >
               <div className="relative h-[209px]">
                 <Image
@@ -163,10 +162,10 @@ export default function Products () {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
       </section>
       <Banner />
     </main>
   );
-};
+}

@@ -1,7 +1,4 @@
-import {
-  FaArrowRight,
-  FaChartSimple,
-} from "react-icons/fa6";
+import { FaArrowRight, FaChartSimple } from "react-icons/fa6";
 import { LuHeartHandshake } from "react-icons/lu";
 import { IoDiamond } from "react-icons/io5";
 
@@ -12,17 +9,17 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    text: "Become a Leader in the Digital Marketing Industry",
+    text: "Transforming Digital Landscapes, One Innovation",
     icon: <FaChartSimple />,
   },
   {
     id: 2,
-    text: "Provide High Quality Services",
+    text: "Pioneering Digital Excellence for Impact",
     icon: <IoDiamond />,
   },
   {
     id: 3,
-    text: "Building Long Term Relationships with Clients",
+    text: "Unleashing Possibilities in the Digital Realm",
     icon: <LuHeartHandshake />,
   },
 ];
@@ -118,10 +115,10 @@ export default function WhoWeAre() {
             <h2 className="font-monument text-xl md:text-4xl text-center mb-6">
               Our Mission
             </h2>
-            <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 xl:gap-11 ">
+            <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 xl:gap-11 text-balance">
               {data.map((item) => (
                 <div
-                  className="flex items-center justify-center h-full bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
+                  className="flex items-center justify-start h-full bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
                   key={item.id}
                 >
                   <span className="text-2xl">{item.icon}</span>

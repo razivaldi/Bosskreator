@@ -14,20 +14,20 @@ const data = [
   },
   {
     image: "/client.png",
-    title: "Client-Centric Approach",
-    desc: "Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility",
+    title: "Collaborative Process",
+    desc: "Describe your collaborative approach to working with clients. Highlight how you involve clients throughout the development process to ensure their vision is realized.",
     href: "/article/brand-strategy",
   },
   {
     image: "/client.png",
     title: "Expertise and Experience",
-    desc: "Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility",
+    desc: "Highlight the depth of your team's experience and expertise in web and app. Showcase successful projects and case studies that demonstrate your agency's capabilities.",
     href: "/article/development",
   },
   {
     image: "/client.png",
     title: "Continuous Improvement",
-    desc: "Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility",
+    desc: "Demonstrate a commitment to continuous learning and improvement. Showcase how your team stays updated with the latest industry trends and technologies.",
     href: "/article/web-dev",
   },
 ];
@@ -37,7 +37,7 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function WhyUs () {
+export default function WhyUs() {
   return (
     <motion.div
       className="w-full md:my-20 relative"
@@ -113,7 +113,7 @@ export default function WhyUs () {
                   <p className="text-[7px] py-1.5 md:pt-4 md:text-sm font-medium">
                     {item.desc}
                   </p>
-                  <p className="flex items-center text-[7px] font-medium md:text-sm">
+                  <p className="flex items-center text-[7px] font-medium md:text-sm hover:underline">
                     Read More
                     <span className="ml-3">
                       <FaChevronRight />
@@ -127,5 +127,4 @@ export default function WhyUs () {
       </div>
     </motion.div>
   );
-};
-
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import InfiniteSlider from "./InfiniteSlider";
+import background from "../../../public/hero.png";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,12 +27,14 @@ const childVariants = {
 
 export default function Hero() {
   return (
-    <section className="w-full h-screen relative -z-10">
+    <section className="w-full relative h-screen -z-10">
       <Image
-        src="/hero.png"
+        src={background}
         fill
         sizes="100vw"
-        alt="hero image"
+        alt="background"
+        placeholder="blur"
+        quality={100}
         priority
         style={{ objectFit: "cover", zIndex: -1 }}
       />
@@ -66,7 +69,7 @@ export default function Hero() {
           </motion.p>
           {/* LOGO SECTION */}
           <motion.div variants={childVariants}>
-            <InfiniteSlider/>
+            <InfiniteSlider />
           </motion.div>
         </div>
       </motion.div>
