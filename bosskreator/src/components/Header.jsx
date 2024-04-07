@@ -157,9 +157,7 @@ export default function Header() {
                   variants={sideBarItemsVariants}
                   animate={isOpen ? "open" : "closed"}
                 >
-                  <div className="rounded pl-7 my-2 py-2 px-4 text-sm hover:bg-white-20 hover:cursor-pointer">
-                    <MobileDropDown toggleSidebar={toggleSidebar}/>
-                  </div>
+                <MobileDropDown toggleSidebar={toggleSidebar}/>
                 </motion.div>
                 <motion.div
                   variants={sideBarItemsVariants}

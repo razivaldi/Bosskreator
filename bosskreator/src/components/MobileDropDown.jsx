@@ -15,10 +15,8 @@ const data = [
   {
     name: "brand strategy",
     href: "/service/brand-strategy",
-  }
+  },
 ];
-
-
 
 const variants = {
   open: {
@@ -39,33 +37,37 @@ export default function MobileDropDown({ toggleSidebar }) {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="">
-      <div
-        className="overflow-hidden"
-        onClick={() => setActive(!active)}
-      >
-        <div className="text-sm inline-flex items-center gap-x-3">
-          Service
-          <motion.span
-            initial={{ rotate: 0 }}
-            animate={{ rotate: active ? 180 : 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <FaChevronDown />
-          </motion.span>
-        </div>
-        <motion.ul
-          variants={variants}
-          animate={active ? "open" : "closed"}
-          className="text-sm md:text-base"
+    <div
+      className="overflow-hidden rounded pl-7 my-2 py-2 px-4 text-sm hover:bg-white-20 hover:cursor-pointer"
+      onClick={() => setActive(!active)}
+    >
+      <div className="text-sm inline-flex items-center gap-x-3">
+        Service
+        <motion.span
+          initial={{ rotate: 0 }}
+          animate={{ rotate: active ? 180 : 0 }}
+          transition={{ duration: 0.5 }}
         >
-          {data.map((item, i) => (
-            <li key={i}>
-              <Link href={item.href} onClick={() => toggleSidebar()} className="py-2 px-4 block hover:bg-white/10 rounded capitalize">{item.name}</Link>
-            </li>
-          ))}
-        </motion.ul>
+          <FaChevronDown />
+        </motion.span>
       </div>
+      <motion.ul
+        variants={variants}
+        animate={active ? "open" : "closed"}
+        className="text-sm md:text-base"
+      >
+        {data.map((item, i) => (
+          <li key={i}>
+            <Link
+              href={item.href}
+              onClick={() => toggleSidebar()}
+              className="py-2 px-4 block hover:bg-white/10 rounded capitalize"
+            >
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </motion.ul>
     </div>
   );
 }
