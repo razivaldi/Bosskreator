@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const data = [
   {
-    image: "/client.png",
+    image: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Client-Centric Approach",
     desc: "Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility",
     href: 
@@ -17,7 +17,7 @@ const data = [
     }
   },
   {
-    image: "/client.png",
+    image: "https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Collaborative Process",
     desc: "Describe your collaborative approach to working with clients. Highlight how you involve clients throughout the development process to ensure their vision is realized.",
     href: {
@@ -26,7 +26,7 @@ const data = [
     }
   },
   {
-    image: "/client.png",
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Expertise and Experience",
     desc: "Highlight the depth of your team's experience and expertise in web and app. Showcase successful projects and case studies that demonstrate your agency's capabilities.",
     href: {
@@ -35,7 +35,7 @@ const data = [
     }
   },
   {
-    image: "/client.png",
+    image: "https://images.unsplash.com/photo-1711097383282-28097ae16b1d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Continuous Improvement",
     desc: "Demonstrate a commitment to continuous learning and improvement. Showcase how your team stays updated with the latest industry trends and technologies.",
     href: {

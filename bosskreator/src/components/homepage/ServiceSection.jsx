@@ -9,23 +9,26 @@ const data = [
   {
     number: "01",
     title: "Development",
+    href: "/service/development",
     description:
       "Experience Innovation at Boss Kreator: Where Growth Meets Vision. Explore our latest developments and cutting-edge solutions designed to propel your business forward in the digital landscape.",
-    image: "/code.jpg",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     number: "02",
     title: "Design",
+    href: "/service/design",
     description:
       "Crafting Digital Excellence: Unveil the Artistry of Design at Boss Kreator. From captivating visuals to seamless user experiences, discover how our design expertise transforms ideas into impactful digital realities.",
-    image: "/phone.png",
+    image: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     number: "03",
     title: "Brand Strategy",
+    href: "/service/brand-strategy",
     description:
       "Strategize Your Success: Uncover the Power of Branding with Boss Kreator. Explore how our tailored brand strategies ignite growth, resonance, and distinction in the digital sphere.",
-    image: "/client.png",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -69,7 +72,7 @@ export default function ServiceSection () {
               Elevate Your Presence: Unveiling Boss Kreator's Dynamic Services. Discover our comprehensive range of innovative solutions tailored to amplify your digital presence and drive success in the online world.
               </p>
               <Link
-                href={"/service/A"}
+                href={"/service/development"}
                 className="rounded-full bg-white-20 px-3 py-2 md:py-3.5 md:px-4 inline-flex items-center text-[7px] md:text-sm font-medium text-nowrap shadow transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95"
               >
                 Explore Our Service
@@ -112,7 +115,7 @@ export default function ServiceSection () {
         </div>
         <div className="lg:w-[55%] mt-10 lg:mt-0">
           {data.map((item, index) => (
-            <Link href={`/service/${item.title}`} key={index}>
+            <Link href={item.href} key={index}>
               <div
                 key={index}
                 className="hover:lg:pl-24 hover:md:pl-20 hover:pl-16 hover:bg-zinc-900 px-14 py-5 lg:pl-20 first:rounded-tr-xl last:rounded-br-xl transition-all duration-300 ease-in-out"

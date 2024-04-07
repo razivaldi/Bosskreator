@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import Dropdown from "./Dropdown";
+import MobileDropDown from "./MobileDropDown";
 
 const menuItems = [
   {
@@ -71,7 +73,7 @@ export default function Header() {
           />
         </div>
         <div className="hidden md:flex">
-          <ul className="flex md:gap-x-10 lg:gap-x-20">
+          <ul className="flex md:gap-x-6 lg:gap-x-14">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <Link
@@ -82,6 +84,9 @@ export default function Header() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Dropdown />
+            </li>
           </ul>
         </div>
         <div className="flex ">
@@ -152,6 +157,14 @@ export default function Header() {
                   variants={sideBarItemsVariants}
                   animate={isOpen ? "open" : "closed"}
                 >
+                  <div className="rounded pl-7 my-2 py-2 px-4 text-sm hover:bg-white-20 hover:cursor-pointer">
+                    <MobileDropDown toggleSidebar={toggleSidebar}/>
+                  </div>
+                </motion.div>
+                <motion.div
+                  variants={sideBarItemsVariants}
+                  animate={isOpen ? "open" : "closed"}
+                >
                   <Link
                     href={"/contact"}
                     onClick={toggleSidebar}
@@ -160,6 +173,7 @@ export default function Header() {
                     Contact Us
                   </Link>
                 </motion.div>
+                
               </div>
             </motion.div>
           </div>

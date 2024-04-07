@@ -1,20 +1,39 @@
 import ArticleContent from "@/components/ArticleContent";
 
-export async function getServerSideProps(context) {
-  try {
-    const { slug } = context.params;
-    const api = process.env.ARTICLE_URL
-    const res = await fetch(`${api}/${slug}`);
-    const data = await res.json();
+// export async function getServerSideProps(context) {
+//   try {
+//     const { slug } = context.params;
+//     const api = process.env.ARTICLE_URL
+//     const res = await fetch(`${api}/${slug}`);
+//     const data = await res.json();
     
-    return {
-      props: { article: data },
-    };
-  } catch (error) {
-    console.log(error)
-    return {
-      props: { error: 'Failed to fetch data' }
-    }
+//     return {
+//       props: { article: data },
+//     };
+//   } catch (error) {
+//     console.log(error)
+//     return {
+//       props: { error: 'Failed to fetch data' }
+//     }
+//   }
+// }
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "development" } },
+      { params: { slug: "design" } },
+      { params: { slug: "brand-strategy" } },
+      { params: { slug: "web-dev" } },
+    ],
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const res = await fetch(`http://localhost:3000/api/article/${params.slug}`)
+  const data = await res.json()
+  return {
+    props: { article: data }
   }
 }
 
