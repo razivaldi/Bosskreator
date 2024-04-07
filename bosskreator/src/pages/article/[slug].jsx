@@ -30,7 +30,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/article/${params.slug}`)
+  const url = process.env.ARTICLE_URL
+  const res = await fetch(`${url}/${params.slug}`)
   const data = await res.json()
   return {
     props: { article: data }
