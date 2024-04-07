@@ -3,31 +3,30 @@ import CTA from "@/components/servicepage/CTA";
 import Pricing from "@/components/servicepage/Pricing";
 import Support from "@/components/servicepage/Support";
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: "development" } },
-      { params: { slug: "design" } },
-      { params: { slug: "brand-strategy" } },
-    ],
-    fallback: false,
-  }
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: "development" } },
+//       { params: { slug: "design" } },
+//       { params: { slug: "brand-strategy" } },
+//     ],
+//     fallback: false,
+//   }
+// }
 
-export async function getStaticProps({ params }) {
-  const url = process.env.SERVICE_URL
-  const res = await fetch(`${url}/${params.slug}`)
-  const data = await res.json()
-  return {
-    props: { article: data }
-  }
-}
+// export async function getStaticProps({ params }) {
+//   const url = process.env.SERVICE_URL
+//   const res = await fetch(`${url}/${params.slug}`)
+//   const data = await res.json()
+//   return {
+//     props: { article: data }
+//   }
+// }
 
 export default function Service({ article }) {
-  console.log(article)
   return (
     <div className="mt-[87px]">
-      <div className="w-full h-[468px] flex items-center relative">
+      {/* <div className="w-full h-[468px] flex items-center relative">
         <Image
           src="/bg-service.png"
           alt="background"
@@ -70,7 +69,7 @@ export default function Service({ article }) {
             {article.paragraph[2]}
           </p>
         </div>
-      </section>
+      </section> */}
       <CTA />
       <Pricing />
       <Support />

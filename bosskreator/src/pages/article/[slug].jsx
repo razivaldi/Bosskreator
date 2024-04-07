@@ -17,26 +17,26 @@ import ArticleContent from "@/components/ArticleContent";
 //     }
 //   }
 // }
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: "development" } },
-      { params: { slug: "design" } },
-      { params: { slug: "brand-strategy" } },
-      { params: { slug: "web-dev" } },
-    ],
-    fallback: false,
-  }
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: "development" } },
+//       { params: { slug: "design" } },
+//       { params: { slug: "brand-strategy" } },
+//       { params: { slug: "web-dev" } },
+//     ],
+//     fallback: false,
+//   }
+// }
 
-export async function getStaticProps({ params }) {
-  const url = process.env.ARTICLE_URL
-  const res = await fetch(`${url}/${params.slug}`)
-  const data = await res.json()
-  return {
-    props: { article: data }
-  }
-}
+// export async function getStaticProps({ params }) {
+//   const url = process.env.ARTICLE_URL
+//   const res = await fetch(`${url}/${params.slug}`)
+//   const data = await res.json()
+//   return {
+//     props: { article: data }
+//   }
+// }
 
 export default function Article({ article }) {
   return (
@@ -49,11 +49,11 @@ export default function Article({ article }) {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-4xl w-11/12 mx-auto px-6">
+      {/* <div className="max-w-4xl w-11/12 mx-auto px-6">
         {article?.content?.map((item, index) => (
           <ArticleContent key={index} content={item} />
         ))}
-      </div>
+      </div> */}
     </main>
   );
 }
