@@ -10,25 +10,38 @@ const data = [
     image: "/client.png",
     title: "Client-Centric Approach",
     desc: "Emphasize a client-focused mentality, showcasing how you prioritize understanding and meeting clients needs. Include testimonials or client success stories to add credibility",
-    href: "/article/design",
+    href: 
+    {
+      pathname: '/article/[slug]',
+      query: { slug: "design" },
+    }
   },
   {
     image: "/client.png",
     title: "Collaborative Process",
     desc: "Describe your collaborative approach to working with clients. Highlight how you involve clients throughout the development process to ensure their vision is realized.",
-    href: "/article/brand-strategy",
+    href: {
+      pathname: '/article/[slug]',
+      query: { slug: "brand-strategy" },
+    }
   },
   {
     image: "/client.png",
     title: "Expertise and Experience",
     desc: "Highlight the depth of your team's experience and expertise in web and app. Showcase successful projects and case studies that demonstrate your agency's capabilities.",
-    href: "/article/development",
+    href: {
+      pathname: '/article/[slug]',
+      query: { slug: "development" },
+    }
   },
   {
     image: "/client.png",
     title: "Continuous Improvement",
     desc: "Demonstrate a commitment to continuous learning and improvement. Showcase how your team stays updated with the latest industry trends and technologies.",
-    href: "/article/web-dev",
+    href: {
+      pathname: '/article/[slug]',
+      query: { slug: "web-dev" },
+    }
   },
 ];
 
@@ -100,7 +113,7 @@ export default function WhyUs() {
                 <div className="w-full h-[100px] md:h-[200px] relative inset-0 bg-black opacity-50">
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt="article image"
                     sizes="100vh"
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform transform ease-in-out"

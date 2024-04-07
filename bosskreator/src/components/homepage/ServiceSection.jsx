@@ -10,21 +10,21 @@ const data = [
     number: "01",
     title: "Development",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cum quia, veritatis distinctio fugit impedit magni commodi rerum dolorum earum aliquid illum consectetur a dicta nam possimus necessitatibus in laborum?",
+      "Experience Innovation at Boss Kreator: Where Growth Meets Vision. Explore our latest developments and cutting-edge solutions designed to propel your business forward in the digital landscape.",
     image: "/code.jpg",
   },
   {
     number: "02",
     title: "Design",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cum quia, veritatis distinctio fugit impedit magni commodi rerum dolorum earum aliquid illum consectetur a dicta nam possimus necessitatibus in laborum?",
+      "Crafting Digital Excellence: Unveil the Artistry of Design at Boss Kreator. From captivating visuals to seamless user experiences, discover how our design expertise transforms ideas into impactful digital realities.",
     image: "/phone.png",
   },
   {
     number: "03",
     title: "Brand Strategy",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Scelerisque massa scelerisque cursus venenatis posuere volutpat. Morbi libero sit posuere ipsum. Vitae diam auctor at imperdiet faucibus sit.",
+      "Strategize Your Success: Uncover the Power of Branding with Boss Kreator. Explore how our tailored brand strategies ignite growth, resonance, and distinction in the digital sphere.",
     image: "/client.png",
   },
 ];
@@ -66,9 +66,7 @@ export default function ServiceSection () {
             <hr className="my-3" />
             <div className="flex w-full justify-between items-center lg:block lg:w-[45%]">
               <p className="line-clamp-3 text-xs md:text-lg font-medium w-4/6 lg:w-full lg:mb-5">
-                Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut
-                magnis quam ullamcorper eget leo. Sed diam lacus ultrices
-                egestas elit ultrices nisl vitae.
+              Elevate Your Presence: Unveiling Boss Kreator's Dynamic Services. Discover our comprehensive range of innovative solutions tailored to amplify your digital presence and drive success in the online world.
               </p>
               <Link
                 href={"/service/A"}

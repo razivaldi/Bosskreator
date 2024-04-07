@@ -70,7 +70,7 @@ export default function Footer () {
         <div className="grid grid-cols-2 md:grid-cols-3 justify-between w-full gap-3 z-10">
           {menuItems.map((section, index) => (
             <div key={index} className="min-w-[120px] justify-self-center">
-              <h3 className="text-xl font-semibold pb-4">{section.title}</h3>
+              <h2 className="text-xl font-semibold pb-4">{section.title}</h2>
               {section.links.map((link, idx) => (
                 <Link
                   key={idx}

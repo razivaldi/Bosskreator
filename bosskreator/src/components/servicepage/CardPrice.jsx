@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CardPrice ({ name, price, list }) {
   return (
-    <div className="flex flex-col border justify-between border-gray-200 text-center rounded-xl p-4 md:p-8 bg-[#E7E8E8]">
+    <div className="flex flex-col border justify-between border-gray-200 text-center rounded-xl p-4 md:p-8 bg-[#E7E8E8] hover:shadow-lg hover:shadow-accent cursor-pointer hover:scale-[1.01] transition-transform ease-in-out">
       <div>
         <h4 className="font-semibold text-sm md:text-xl text-accent">{name}</h4>
         <p className="my-3 font-monument text-4xl md:text-5xl text-black">

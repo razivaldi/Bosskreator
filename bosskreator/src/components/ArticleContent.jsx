@@ -32,6 +32,7 @@ export default function ArticleContent({ content }) {
           <Image
             src={content.src}
             fill
+            sizes="50vw"
             alt={content.alt}
             style={{ objectFit: "cover" }}
           />
@@ -54,6 +55,7 @@ export default function ArticleContent({ content }) {
               <figure className="relative w-full h-60">
                 <Image
                   fill
+                  sizes="50vw"
                   className="size-full absolute top-0 start-0 object-cover rounded-xl"
                   src={content.href[0]}
                   alt={content.alt}
@@ -62,6 +64,7 @@ export default function ArticleContent({ content }) {
               <figure className="relative w-full h-60">
                 <Image
                   fill
+                  sizes="50vw"
                   className="size-full absolute top-0 start-0 object-cover rounded-xl"
                   src={content.href[1]}
                   alt="Image Description"
@@ -71,6 +74,7 @@ export default function ArticleContent({ content }) {
             <figure className="relative w-full h-72 sm:h-96 lg:h-full">
               <Image
                 fill
+                sizes="50vw"
                 className="size-full absolute top-0 start-0 object-cover rounded-xl"
                 src={content.href[2]}
                 alt="Image Description"

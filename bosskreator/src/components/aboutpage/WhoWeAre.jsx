@@ -9,7 +9,7 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    text: "Transforming Digital Landscapes, One Innovation",
+    text: "Transforming Digital Landscapes",
     icon: <FaChartSimple />,
   },
   {
@@ -122,7 +122,7 @@ export default function WhoWeAre() {
                   key={item.id}
                 >
                   <span className="text-2xl">{item.icon}</span>
-                  <p className="font-medium text-xs md:text-sm ">{item.text}</p>
+                  <p className="font-medium text-xs md:text-sm text-balance">{item.text}</p>
                 </div>
               ))}
             </div>

@@ -1,13 +1,21 @@
 import ArticleContent from "@/components/ArticleContent";
 
 export async function getServerSideProps(context) {
-  const { slug } = context.params;
-  const res = await fetch(`https://bosskreator.vercel.app/api/article/${slug}`);
-  const data = await res.json();
-
-  return {
-    props: { article: data },
-  };
+  try {
+    const { slug } = context.params;
+    const api = process.env.ARTICLE_URL
+    const res = await fetch(`${api}/${slug}`);
+    const data = await res.json();
+    
+    return {
+      props: { article: data },
+    };
+  } catch (error) {
+    console.log(error)
+    return {
+      props: { error: 'Failed to fetch data' }
+    }
+  }
 }
 
 export default function Article({ article }) {
@@ -22,7 +30,7 @@ export default function Article({ article }) {
       }}
     >
       <div className="max-w-4xl w-11/12 mx-auto px-6">
-        {article.content.map((item, index) => (
+        {article?.content?.map((item, index) => (
           <ArticleContent key={index} content={item} />
         ))}
       </div>

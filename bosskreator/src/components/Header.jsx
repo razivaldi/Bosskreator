@@ -47,7 +47,7 @@ const sideBarItemsVariants = {
   },
 };
 
-export default function Header () {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -85,15 +85,19 @@ export default function Header () {
           </ul>
         </div>
         <div className="flex ">
-          <Link href="/contact">
-            <button className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95">
-              Contact Us
-            </button>
+          <Link
+            href="/contact"
+            aria-label="Contact Us"
+            className="text-sm rounded-full hidden md:block px-4 py-2.5 bg-white-20 transition duration-200 ease-in-out transform hover:bg-white/10 active:scale-95"
+          >
+            Contact Us
           </Link>
           <div>
             <button
               className="relative md:hidden hover:bg-white-20 p-1 rounded shadow transition duration-200 ease-in-out transform active:scale-95"
               style={{ zIndex: 20 }}
+              aria-label="Toggle sidebar"
+              type="button"
               onClick={toggleSidebar}
             >
               {isOpen ? (
@@ -163,4 +167,4 @@ export default function Header () {
       </div>
     </nav>
   );
-};
+}

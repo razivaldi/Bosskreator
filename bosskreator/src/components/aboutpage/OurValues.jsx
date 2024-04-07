@@ -23,10 +23,9 @@ export default function OurValues () {
         <div className="relative mx-auto w-[16rem] md:w-[32rem] h-[16rem] md:h-[32rem] pl-3 md:pl-0">
           <Image
             src={"/phone.png"}
-            alt=""
             fill
             style={{ objectFit: "cover", borderRadius: "20px" }}
-            sizes="50vw"
+            sizes="(max-width: 1200px) 50vw, 100vw"
           />
         </div>
       </div>

@@ -27,7 +27,7 @@ const childVariants = {
 
 export default function Hero() {
   return (
-    <section className="w-full relative h-screen -z-10">
+    <section className="w-full relative h-dvh -z-10">
       <Image
         src={background}
         fill
