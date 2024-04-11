@@ -49,15 +49,13 @@ export default function Hero() {
             variants={childVariants}
             className="text-3xl leading-[1.1] md:text-6xl mb-7 md:leading-[1.1] font-monument"
           >
-            Turning Ideas into Intuitive Digital Experiences.
+            "Innovate. Elevate. Dominate: Unleash Your Brand's Potential with Us!"
           </motion.h1>
           <motion.p
             variants={childVariants}
             className="mx-auto md:w-[90%] line-clamp-3 font-medium text-lg"
           >
-            Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis
-            quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit
-            ultrices nisl vitae.
+            Step into our realm where innovation thrives, elevating brands to new heights and dominating markets with unparalleled creativity. We're not just a marketing agency; we're the architects of your brand's success story
           </motion.p>
         </div>
         <div className="w-full">
@@ -65,7 +63,7 @@ export default function Hero() {
             variants={childVariants}
             className=" text-center text-lg w-[90%] mb-5 md:mb-10 font-medium mx-auto"
           >
-            Lacus orci cursus ut magnis quam ullamcorper eget leo:
+            Find Us:
           </motion.p>
           {/* LOGO SECTION */}
           <motion.div variants={childVariants}>

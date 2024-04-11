@@ -51,9 +51,7 @@ export default function Footer () {
             />
           </div>
           <p className="text-sm py-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo
-            temporibus magnam ducimus quas cumque sequi delectus molestias, quod
-            repudiandae.
+          Empower Your Brand, Command Your Market: Boss Kreator Leads the Way!
           </p>
           <div className="flex gap-4 text-xl justify-center mb-6 lg:mb-0 lg:justify-start">
             <Link href={"/"}>

@@ -9,17 +9,17 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    text: "Transforming Digital Landscapes",
+    text: "Empower brands to not only succeed but to inspire audiences, driving meaningful connections.",
     icon: <FaChartSimple />,
   },
   {
     id: 2,
-    text: "Pioneering Digital Excellence for Impact",
+    text: "Leave an enduring legacy of innovation and impact, shaping the future of digital branding.",
     icon: <IoDiamond />,
   },
   {
     id: 3,
-    text: "Unleashing Possibilities in the Digital Realm",
+    text: "Establish new benchmarks for excellence through pioneering strategies and innovative solutions.",
     icon: <LuHeartHandshake />,
   },
 ];
@@ -104,11 +104,7 @@ export default function WhoWeAre() {
               Our Vision
             </h2>
             <p className="font-medium text-xs md:text-base text-justify">
-              To be a leading digital agency, empowering businesses with
-              innovative solutions that transcend the digital realm. We envision
-              a future where our strategic insights, creative brilliance, and
-              technological expertise converge to drive unparalleled success for
-              our clients.
+            At Boss Kreator, we envision a world where every brand's story is told with brilliance and authenticity. We strive to be the catalyst for creative revolutions, pushing boundaries and redefining norms in the pursuit of excellence. Our vision is to empower brands to not only thrive but to inspire, leaving a legacy of innovation and impact in the digital realm.
             </p>
           </div>
           <div className="mt-8 lg:mt-0 basis-7/12">
@@ -118,7 +114,7 @@ export default function WhoWeAre() {
             <div className="grid lg:grid-cols-3 justify-center gap-5 md:gap-7 xl:gap-11 text-balance">
               {data.map((item) => (
                 <div
-                  className="flex items-center justify-start h-full bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
+                  className="flex flex-col items-center justify-center h-full bg-white-20 px-[18px] py-6 gap-3 rounded-lg"
                   key={item.id}
                 >
                   <span className="text-2xl">{item.icon}</span>
