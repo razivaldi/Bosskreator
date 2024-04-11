@@ -49,8 +49,9 @@ export default function OurTeam () {
                 src={url}
                 fill
                 className="object-cover"
-                alt={""}
-                sizes="(max-width: 768px) 50vw),(max-width: 1200px) 25vw, 100vw"
+                alt={name}  
+                quality={100}
+                sizes="(max-width: 768px) 100vw), 50vw"
               />
               <span className="group-hover:opacity-100 opacity-0 absolute w-full h-full bg-neutral-800/30"></span>
               <div className="absolute w-full text-center bottom-5 p-3 bg-[#212121] opacity-0 transition-opacity group-hover:opacity-100">
