@@ -34,7 +34,7 @@ export default function OurTeam () {
     <section className="relative mb-14">
       <SectionName>our team</SectionName>
       <div className="w-[90%] mx-auto">
-        <h1 className="font-monument text-xl md:text-[50px] leading-[1.1] text-center mb-14">
+        <h1 className="font-monument text-2xl md:text-[50px] leading-[1.1] text-center mb-14">
           Meet the <span className="text-accent">Minds</span> Behind Our Digital
           Mastery
         </h1>

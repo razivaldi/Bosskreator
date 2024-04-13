@@ -9,7 +9,7 @@ const data = [
     name: "Fleur Cook",
     imageUrl:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    position: "Web Developer, Sisyphus",
+    position: "Web Programmer, Sisyphus",
     testimonial:
       "Outstanding service! BOSS KREATOR exceeded all expectations. Highly recommended!",
   },
@@ -27,7 +27,7 @@ const data = [
     name: "Fleur Cook",
     imageUrl:
       "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    position: "Web Developer, Sisyphus",
+    position: "UI/UX Developer, Sisyphus",
     testimonial:
       "Incredible results! BOSS KREATOR sets the standard for excellence. Delighted with their service!",
   },

@@ -5,21 +5,21 @@ import { FaChevronUp } from "react-icons/fa6";
 const data = [
   {
     id: 1,
-    title: "Non consectetur a erat nam at lectus urna duis?",
+    title: "Data Security & Privacy",
     content:
-      "#1This is accordion items body. It is shown or hidden by default, depending on the state. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+      "Detail the significance of data security and privacy in your digital ecosystem. Outline the strategies employed to safeguard customer and business information.",
   },
   {
     id: 2,
-    title: "Non consectetur a erat nam at lectus urna duis?",
+    title: "Innovation & Development",
     content:
-      "#2This is accordion items body. It is shown or hidden by default, depending on the state. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+      "Describe your team's approach to innovation and the latest technologies adopted. Showcase recent projects or initiatives that exemplify the company's commitment to innovation.",
   },
   {
     id: 3,
-    title: "Non consectetur a erat nam at lectus urna duis?",
+    title: "Customer Engagement",
     content:
-      "#3This is accordion items body. It is shown or hidden by default, depending on the state. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+      "Discuss unique methods your company uses to enhance customer experience through digital platforms. Provide examples of customer engagement strategies that have successfully increased loyalty and retention.",
   },
 ];
 
