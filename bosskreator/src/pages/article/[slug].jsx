@@ -1,22 +1,6 @@
 import ArticleContent from "@/components/ArticleContent";
 
-// export async function getServerSideProps(context) {
-//   try {
-//     const { slug } = context.params;
-//     const api = process.env.ARTICLE_URL
-//     const res = await fetch(`${api}/${slug}`);
-//     const data = await res.json();
-    
-//     return {
-//       props: { article: data },
-//     };
-//   } catch (error) {
-//     console.log(error)
-//     return {
-//       props: { error: 'Failed to fetch data' }
-//     }
-//   }
-// }
+
 export async function getStaticPaths() {
   return {
     paths: [

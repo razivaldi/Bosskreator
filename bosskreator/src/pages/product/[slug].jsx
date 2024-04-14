@@ -13,7 +13,7 @@ const product = {
     "Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leo. Sed diam lacus ultrices egestas elit ultrices nisl vitae. Lorem ipsum dolor sit amet consectetur. Lacus orci cursus ut magnis quam ullamcorper eget leoed diam lacus ultrices egestas elit ultrices nisl vitae.",
   price: "Free",
   publisher: "Erlannga",
-  category: "Course",
+  category: "Ebook",
   stock: 50,
   rating: 5,
   images: [
@@ -24,6 +24,24 @@ const product = {
 };
 export default function Product () {
   const [selected, setSelected] = useState("description");
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const data = {
+      title: product.title,
+      price: 200000,
+    }
+
+    const buy = await fetch('https://test-be-beta.vercel.app/buy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    const res = await buy.json();
+    window.snap.pay(res.token)
+  }
   return (
     <main
       className="pt-[119px] w-full"
@@ -80,7 +98,7 @@ export default function Product () {
             </p>
           </div>
           <div>
-            <button className="py-3 px-4 md:py-4 md:px-8 bg-accent font-medium rounded-full mr-6 text-sm">
+            <button onClick={handleSubmit} className="py-3 px-4 md:py-4 md:px-8 bg-accent font-medium rounded-full mr-6 text-sm">
               {product.category === "Ebook" ? "Download" : "Start Learning"}
             </button>
             {product.category === "Ebook" && (
